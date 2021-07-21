@@ -21,8 +21,11 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.StorageTask;
@@ -109,9 +112,34 @@ public class PostActivity extends AppCompatActivity {
                         Uri downloadUri = task.getResult();
                         myUrl = downloadUri.toString();
 
-                        DatabaseReference reference = FirebaseDatabase.getInstance().getReference("Posts");
+                        /*DatabaseReference ref = FirebaseDatabase.getInstance().getReference();
+                        DatabaseReference mostafa = ref.child("Posts").child(myUrl).child("_postimage");
 
+                        mostafa.addListenerForSingleValueEvent(new ValueEventListener() {
+                            @Override
+                            public void onDataChange(DataSnapshot dataSnapshot) {
+                                String postimage = dataSnapshot.getValue(String.class);
+                                myUrl=postimage;
+                            }
+
+                            @Override
+                            public void onCancelled(DatabaseError databaseError) {
+
+                            }
+                        });*/
+
+
+
+
+
+
+
+                        DatabaseReference reference = FirebaseDatabase.getInstance().getReference("Posts");
+                        //DatabaseReference mostafa = FirebaseDatabase.getInstance().getReference().child("Posts").child(myUrl).child("_postimage");
                         String postid = reference.push().getKey();
+                        //String reallink  = mostafa.getKey();
+
+
 
                         HashMap<String,Object> hashMap = new HashMap<>();
                         hashMap.put("postid", postid);

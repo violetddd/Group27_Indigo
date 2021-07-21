@@ -25,7 +25,7 @@ public class Post {
     }
 
     public String getPostimage(){
-        return postid;
+        return postimage;
     }
 
     public void setPostimage(String postimage){

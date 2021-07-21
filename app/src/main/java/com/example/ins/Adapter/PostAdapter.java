@@ -1,6 +1,7 @@
 package com.example.ins.Adapter;
 
 import android.content.Context;
+import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,11 +13,15 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 //import com.example.ins.GlideApp;
+import com.bumptech.glide.request.target.Target;
 import com.example.ins.GlideApp;
 import com.example.ins.Model.Post;
 import com.example.ins.Model.User;
 import com.example.ins.PostActivity;
 import com.example.ins.R;
+import com.google.android.gms.auth.api.signin.internal.Storage;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
@@ -56,16 +61,21 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.ViewHolder>{
 
             firebaseUser = FirebaseAuth.getInstance().getCurrentUser();
             Post post = mPost.get(i);
+            String url = post.getPostimage();
 
 
+            FirebaseStorage storage = FirebaseStorage.getInstance();
+            StorageReference storageReference = storage.getReferenceFromUrl(url);
             StorageReference ref= FirebaseStorage.getInstance().getReference();
 
 
-            //Glide.with(mContext).load(post.getPostimage()).into(viewHolder.post_image);
-            //Glide.with(mContext).load(ref).into(viewHolder.post_image);
-            GlideApp.with(mContext).load(ref).into(viewHolder.post_image);
 
-            /*if(post.getDescription().equals("")){
+
+            GlideApp.with(mContext).load(storageReference).into(viewHolder.post_image);
+
+
+
+           /* if(post.getDescription().equals("")){
                 viewHolder.description.setVisibility(View.GONE);
             } else{
                 viewHolder.description.setVisibility(View.VISIBLE);
