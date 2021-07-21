@@ -75,12 +75,12 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.ViewHolder>{
 
 
 
-           /* if(post.getDescription().equals("")){
+           if(post.getDescription().equals("")){
                 viewHolder.description.setVisibility(View.GONE);
             } else{
                 viewHolder.description.setVisibility(View.VISIBLE);
                 viewHolder.description.setText(post.getDescription());
-            }*/
+            }
 
             publisherInfo(viewHolder.image_profile, viewHolder.username, viewHolder.publisher,post.getPublisher());
 

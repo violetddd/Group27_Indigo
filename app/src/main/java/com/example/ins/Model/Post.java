@@ -37,7 +37,7 @@ public class Post {
     }
 
     public void setDescription(String description){
-        this.postid = postid;
+        this.description = description;
     }
 
     public String getPublisher(){
