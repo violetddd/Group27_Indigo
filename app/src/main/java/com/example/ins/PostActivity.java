@@ -111,33 +111,10 @@ public class PostActivity extends AppCompatActivity {
                     if (task.isSuccessful()){
                         Uri downloadUri = task.getResult();
                         myUrl = downloadUri.toString();
-
-                        /*DatabaseReference ref = FirebaseDatabase.getInstance().getReference();
-                        DatabaseReference mostafa = ref.child("Posts").child(myUrl).child("_postimage");
-
-                        mostafa.addListenerForSingleValueEvent(new ValueEventListener() {
-                            @Override
-                            public void onDataChange(DataSnapshot dataSnapshot) {
-                                String postimage = dataSnapshot.getValue(String.class);
-                                myUrl=postimage;
-                            }
-
-                            @Override
-                            public void onCancelled(DatabaseError databaseError) {
-
-                            }
-                        });*/
-
-
-
-
-
-
-
                         DatabaseReference reference = FirebaseDatabase.getInstance().getReference("Posts");
-                        //DatabaseReference mostafa = FirebaseDatabase.getInstance().getReference().child("Posts").child(myUrl).child("_postimage");
+
                         String postid = reference.push().getKey();
-                        //String reallink  = mostafa.getKey();
+
 
 
 
