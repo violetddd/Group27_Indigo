@@ -3,6 +3,8 @@ package com.example.ins;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -14,6 +16,8 @@ import android.widget.Toast;
 //import android.widget.Toolbar;
 
 import com.bumptech.glide.Glide;
+import com.example.ins.Adapter.CommentAdapter;
+import com.example.ins.Model.Comment;
 import com.example.ins.Model.User;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -25,9 +29,15 @@ import com.google.firebase.database.ValueEventListener;
 
 import org.jetbrains.annotations.NotNull;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 
 public class CommentsActivity extends AppCompatActivity {
+
+    private RecyclerView recyclerView;
+    private CommentAdapter commentAdapter;
+    private List<Comment> commentList;
 
     EditText addcomment;
     ImageView image_profile;
@@ -52,6 +62,14 @@ public class CommentsActivity extends AppCompatActivity {
             }
         });
 
+        recyclerView = findViewById(R.id.recycler_view);
+        recyclerView.setHasFixedSize(true);
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
+        recyclerView.setLayoutManager(linearLayoutManager);
+        commentList =  new ArrayList<>();
+        commentAdapter = new CommentAdapter(this,commentList);
+        recyclerView.setAdapter(commentAdapter);
+
         addcomment = findViewById(R.id.add_comment);
         image_profile= findViewById(R.id.image_profile);
         post = findViewById(R.id.post);
@@ -72,6 +90,7 @@ public class CommentsActivity extends AppCompatActivity {
             }
         });
         getImage();
+        readComments();
     }
 
     private void addComment(){
@@ -91,13 +110,41 @@ public class CommentsActivity extends AppCompatActivity {
 
         reference.addValueEventListener(new ValueEventListener() {
             @Override
-            public void onDataChange(@NonNull @NotNull DataSnapshot snapshot) {
+            public void onDataChange( DataSnapshot snapshot) {
                 User user = snapshot.getValue(User.class);
                 Glide.with(getApplicationContext()).load(user.getImageurl()).into(image_profile);
             }
 
             @Override
-            public void onCancelled(@NonNull @NotNull DatabaseError error) {
+            public void onCancelled( DatabaseError error) {
+
+            }
+        });
+    }
+
+    private void readComments(){
+        DatabaseReference reference = FirebaseDatabase.getInstance().getReference("Comments").child(postid).child("comments");
+        String ref = reference.push().getKey();
+        System.out.println(ref);
+        //String commentss= Glide.get()
+
+        reference.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                commentList.clear();
+                for(DataSnapshot snapshot: dataSnapshot.getChildren()){
+                    Comment comment = snapshot.getValue(Comment.class);
+                    commentList.add(comment);
+                    //System.out.println(comment.toString());
+
+                }
+
+                commentAdapter.notifyDataSetChanged();
+                //System.out.println(commentList.toString());
+            }
+
+            @Override
+            public void onCancelled(DatabaseError error) {
 
             }
         });
