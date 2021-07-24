@@ -31,10 +31,10 @@ import java.util.List;
 public class CommentAdapter extends RecyclerView.Adapter<CommentAdapter.ViewHolder> {
 
     private Context mContext;
-    private List<Comment>mComment;
+    private List<Comment> mComment;
     private FirebaseUser firebaseUser;
 
-    public CommentAdapter(Context mContext,List<Comment> mComment){
+    public CommentAdapter(Context mContext ,List<Comment> mComment){
         this.mContext = mContext;
         this.mComment = mComment;
     }
@@ -52,6 +52,7 @@ public class CommentAdapter extends RecyclerView.Adapter<CommentAdapter.ViewHold
         firebaseUser = FirebaseAuth.getInstance().getCurrentUser();
         final Comment comment = mComment.get(position);
         holder.comment.setText(comment.getComment());
+        //System.out.println("Message: "+comment.getComment());
         getUserInfo(holder.image_profile, holder.username, comment.getPublisher());
 
         holder.comment.setOnClickListener(new View.OnClickListener() {
@@ -96,7 +97,7 @@ public class CommentAdapter extends RecyclerView.Adapter<CommentAdapter.ViewHold
 
     }
 
-    private void getUserInfo(final ImageView imageView, final TextView username, String publisherid){
+    private void getUserInfo( ImageView imageView,  TextView username, String publisherid){
         DatabaseReference reference = FirebaseDatabase.getInstance().getReference().child("Users").child(publisherid);
 
         reference.addValueEventListener(new ValueEventListener() {

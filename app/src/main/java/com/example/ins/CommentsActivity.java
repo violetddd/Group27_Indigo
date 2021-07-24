@@ -95,8 +95,11 @@ public class CommentsActivity extends AppCompatActivity {
 
     private void addComment(){
         DatabaseReference reference = FirebaseDatabase.getInstance().getReference("Comments").child(postid);
+        String commentid = reference.push().getKey();
+        System.out.println(commentid);
 
         HashMap<String,Object> hashMap = new HashMap<>();
+        hashMap.put("commentid",commentid);
         hashMap.put("comments",addcomment.getText().toString());
         hashMap.put("publisher",firebaseUser.getUid());
 
@@ -123,10 +126,10 @@ public class CommentsActivity extends AppCompatActivity {
     }
 
     private void readComments(){
-        DatabaseReference reference = FirebaseDatabase.getInstance().getReference("Comments").child(postid).child("comments");
-        String ref = reference.push().getKey();
-        System.out.println(ref);
-        //String commentss= Glide.get()
+        DatabaseReference reference = FirebaseDatabase.getInstance().getReference("Comments").child(postid);
+        //DatabaseReference test = FirebaseDatabase.getInstance().getReference("Comments").child(postid).child();
+        String ref = reference.toString();
+        System.out.println(ref+"hahahahah");
 
         reference.addValueEventListener(new ValueEventListener() {
             @Override
