@@ -45,6 +45,7 @@ dependencies {
     annotationProcessor 'androidx.annotation:annotation:1.1.0'
     //annotationProcessor 'com.github.bumptech.glide:compiler:4.x'
     //implementation 'com.squareup.picasso:picasso:2.71828'
+    implementation 'com.rengwuxian.materialedittext:library:2.1.4'
     implementation 'com.theartofdev.edmodo:android-image-cropper:2.7.+'
     implementation 'com.google.firebase:firebase-auth:19.2.0'
     implementation 'com.firebaseui:firebase-ui-storage:3.2.1'
