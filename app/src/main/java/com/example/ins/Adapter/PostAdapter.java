@@ -18,6 +18,7 @@ import com.bumptech.glide.Glide;
 //import com.example.ins.GlideApp;
 import com.bumptech.glide.request.target.Target;
 import com.example.ins.CommentsActivity;
+import com.example.ins.FollowerActivity;
 import com.example.ins.Fragment.PostDetailFragment;
 import com.example.ins.Fragment.ProfileFragment;
 import com.example.ins.GlideApp;
@@ -204,6 +205,16 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.ViewHolder>{
                     Intent intent = new Intent(mContext, CommentsActivity.class);
                     intent.putExtra("postid",post.getPostid());
                     intent.putExtra("publisherid",post.getPublisher());
+                    mContext.startActivity(intent);
+                }
+            });
+
+            viewHolder.likes.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Intent intent = new Intent(mContext, FollowerActivity.class);
+                    intent.putExtra("id",post.getPostid());
+                    intent.putExtra("title","likes");
                     mContext.startActivity(intent);
                 }
             });

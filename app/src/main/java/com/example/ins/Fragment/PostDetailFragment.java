@@ -61,7 +61,8 @@ public class PostDetailFragment extends Fragment {
     private void readPost() {
         DatabaseReference reference = FirebaseDatabase.getInstance().getReference("Posts").child(postid);
 
-        reference.addValueEventListener(new ValueEventListener() {
+        //used to be addValueEventlitener
+        reference.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull @NotNull DataSnapshot snapshot) {
                 postList.clear();

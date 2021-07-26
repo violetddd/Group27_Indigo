@@ -14,7 +14,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Ins">
-        <activity android:name=".EditProfileActivity"></activity>
+        <activity android:name=".FollowerActivity"></activity>
+        <activity android:name=".EditProfileActivity" />
         <activity android:name=".CommentsActivity" />
         <activity android:name=".PostActivity" />
         <activity android:name=".LoginActivity" />
