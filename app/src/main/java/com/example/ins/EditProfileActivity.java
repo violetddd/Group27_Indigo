@@ -8,6 +8,7 @@ import android.app.ProgressDialog;
 import android.content.ContentResolver;
 import android.content.Intent;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.webkit.MimeTypeMap;
@@ -94,8 +95,8 @@ public class EditProfileActivity extends AppCompatActivity {
         tv_change.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                CropImage.activity().setAspectRatio(1,1).setCropShape(CropImageView.CropShape.OVAL).start(EditProfileActivity.this);
-
+                //CropImage.activity().setAspectRatio(1,1).setCropShape(CropImageView.CropShape.OVAL).start(EditProfileActivity.this);
+                CropImage.activity().setCropShape(Build.VERSION.SDK_INT>=Build.VERSION_CODES.P?CropImageView.CropShape.RECTANGLE:CropImageView.CropShape.OVAL).start(EditProfileActivity.this);
             }
         });
 
