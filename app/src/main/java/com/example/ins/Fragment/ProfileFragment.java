@@ -26,6 +26,7 @@ import com.example.ins.FollowerActivity;
 import com.example.ins.Model.Post;
 import com.example.ins.Model.User;
 import com.example.ins.MyAppGlideModule;
+import com.example.ins.OptionsActivity;
 import com.example.ins.R;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -138,6 +139,16 @@ public class ProfileFragment extends Fragment {
                 }
             }
         });
+
+        options.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getContext(), OptionsActivity.class);
+                startActivity(intent);
+            }
+        });
+
+
 
         my_fotos.setOnClickListener(new View.OnClickListener() {
             @Override

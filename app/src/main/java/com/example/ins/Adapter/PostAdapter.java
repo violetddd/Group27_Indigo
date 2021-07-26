@@ -16,6 +16,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 //import com.example.ins.GlideApp;
+import com.bumptech.glide.request.RequestOptions;
 import com.bumptech.glide.request.target.Target;
 import com.example.ins.CommentsActivity;
 import com.example.ins.FollowerActivity;
@@ -80,7 +81,8 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.ViewHolder>{
 
 
 
-            GlideApp.with(mContext).load(storageReference).into(viewHolder.post_image);
+            GlideApp.with(mContext).load(storageReference).apply(new RequestOptions().placeholder(R.drawable.placeholder)).
+                    into(viewHolder.post_image);
 
 
 
