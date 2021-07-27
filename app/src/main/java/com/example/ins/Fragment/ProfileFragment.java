@@ -124,7 +124,7 @@ public class ProfileFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 String button = edit_profile.getText().toString();
-                System.out.println(button);
+                //System.out.println(button);
                 if (button.equals("Edit Profile")) {
                     //System.out.println("hi");
                     startActivity(new Intent(getContext(), EditProfileActivity.class));

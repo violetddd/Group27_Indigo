@@ -149,14 +149,14 @@ public class EditProfileActivity extends AppCompatActivity {
                 public void onComplete(@NonNull @NotNull Task<Uri>task) {
                     if(task.isSuccessful()){
                         Uri downloadUri = task.getResult();
-                        String myUrl = downloadUri.toString();
+                        String miUrlOK = downloadUri.toString();
 
                         DatabaseReference reference = FirebaseDatabase.getInstance().getReference("Users").child(firebaseUser.getUid());
 
-                        HashMap<String,Object> hashMap = new HashMap<>();
-                        hashMap.put("imageurl",""+myUrl);
+                        HashMap<String,Object> map1 = new HashMap<>();
+                        map1.put("imageurl",""+miUrlOK);
 
-                        reference.updateChildren(hashMap);
+                        reference.updateChildren(map1);
                         pd.dismiss();
 
                     } else {
@@ -165,7 +165,7 @@ public class EditProfileActivity extends AppCompatActivity {
                 }
             }).addOnFailureListener(new OnFailureListener() {
                 @Override
-                public void onFailure(@NonNull @NotNull Exception e) {
+                public void onFailure(@NonNull Exception e) {
                     Toast.makeText(EditProfileActivity.this, e.getMessage(),Toast.LENGTH_SHORT).show();
                 }
             });
