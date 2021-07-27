@@ -56,43 +56,45 @@ import org.jetbrains.annotations.NotNull;
 import java.util.HashMap;
 import java.util.List;
 
-public class PostAdapter extends RecyclerView.Adapter<PostAdapter.ViewHolder>{
+public class PostAdapter extends RecyclerView.Adapter<PostAdapter.ImageViewHolder>{
 
         public Context mContext;
-        //public Context mContext;
-        public List<Post> mPost;
+        public List<Post> mPosts;
 
         private FirebaseUser firebaseUser;
-        private StorageReference ref;
+        //private StorageReference ref;
 
-        public PostAdapter(Context mContext, List<Post> mPost){
+        public PostAdapter(Context mContext, List<Post> posts){
             this.mContext = mContext;
-            this.mPost = mPost;
+            this.mPosts = posts;
         }
 
         @NonNull
         @Override
-        public ViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i){
+        public PostAdapter.ImageViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i){
             View view = LayoutInflater.from(mContext).inflate(R.layout.post_item, viewGroup,false);
-            return new PostAdapter.ViewHolder(view);
+            return new PostAdapter.ImageViewHolder(view);
         }
 
         @Override
-        public void onBindViewHolder(@NonNull ViewHolder viewHolder, int i){
+        public void onBindViewHolder(@NonNull final PostAdapter.ImageViewHolder viewHolder, final int i){
 
             firebaseUser = FirebaseAuth.getInstance().getCurrentUser();
-            Post post = mPost.get(i);
-            String url = post.getPostimage();
+            final Post post = mPosts.get(i);
+            //String url = post.getPostimage();
 
 
-            FirebaseStorage storage = FirebaseStorage.getInstance();
-            StorageReference storageReference = storage.getReferenceFromUrl(url);
+            //FirebaseStorage storage = FirebaseStorage.getInstance();
+            //StorageReference storageReference = storage.getReferenceFromUrl(url);
             //StorageReference ref= FirebaseStorage.getInstance().getReference();
 
 
 
+// working code!
+           /* GlideApp.with(mContext).load(storageReference).apply(new RequestOptions().placeholder(R.drawable.placeholder)).
+                    into(viewHolder.post_image);*/
 
-            GlideApp.with(mContext).load(storageReference).apply(new RequestOptions().placeholder(R.drawable.placeholder)).
+            Glide.with(mContext).load(post.getPostimage()).apply(new RequestOptions().placeholder(R.drawable.placeholder)).
                     into(viewHolder.post_image);
 
 
@@ -279,15 +281,15 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.ViewHolder>{
 
         @Override
         public int getItemCount(){
-            return mPost.size();
+            return mPosts.size();
         }
 
-        public class ViewHolder extends RecyclerView.ViewHolder{
+        public class ImageViewHolder extends RecyclerView.ViewHolder{
 
             public ImageView image_profile, post_image,like, comment,save,more;
             public TextView username, likes, publisher, description, comments;
 
-            public ViewHolder(@NonNull View itemView){
+            public ImageViewHolder(@NonNull View itemView){
                 super(itemView);
 
                 image_profile = itemView.findViewById(R.id.image_profile);

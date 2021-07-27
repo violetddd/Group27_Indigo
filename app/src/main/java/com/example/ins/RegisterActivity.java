@@ -75,9 +75,9 @@ public class RegisterActivity extends AppCompatActivity {
        register.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v)  {
-//           pd = new ProgressDialog(RegisterActivity.this);
-//           pd.setMessage("Please wait....");
-//           pd.show();
+            pd = new ProgressDialog(RegisterActivity.this);
+            pd.setMessage("Please wait....");
+            pd.show();
 
            String str_username = username.getText().toString();
            String str_fullname = fullname.getText().toString();
@@ -85,15 +85,17 @@ public class RegisterActivity extends AppCompatActivity {
            String str_password= password.getText().toString();
 
            if (username.getText().toString().isEmpty()||TextUtils.isEmpty(str_fullname)||TextUtils.isEmpty(str_email)||TextUtils.isEmpty(str_password)){
-              // Toast.makeText (RegisterActivity.this, "All fileds are required!", Toast.LENGTH_SHORT).show();
-               txt_hint.setText("All fileds are required!");
+              Toast.makeText (RegisterActivity.this, "All fileds are required!", Toast.LENGTH_SHORT).show();
+               //txt_hint.setText("All fileds are required!");
+               pd.dismiss();
            } else if (str_password.length() <6) {
-               //Toast.makeText(RegisterActivity.this, "Password must have 6 characters", Toast.LENGTH_SHORT).show();
+               Toast.makeText(RegisterActivity.this, "Password must have 6 characters", Toast.LENGTH_SHORT).show();
                //register.setText("HI");
-               txt_hint.setText("Password must have 6 characters");
+               //txt_hint.setText("Password must have 6 characters");
+               pd.dismiss();
            } else {
                register(str_username, str_fullname, str_email, str_password);
-              txt_hint.setText(str_username+","+str_fullname+","+str_email+","+str_password);
+              //txt_hint.setText(str_username+","+str_fullname+","+str_email+","+str_password);
                }
 
        }
@@ -109,7 +111,7 @@ public class RegisterActivity extends AppCompatActivity {
                             FirebaseUser firebaseUser = auth.getCurrentUser();
                             String userid = firebaseUser.getUid();
 
-                            if_success.setText("successful");
+                            //if_success.setText("successful");
 
                             reference = FirebaseDatabase.getInstance().getReference().child("Users").child(userid);
 
@@ -134,9 +136,9 @@ public class RegisterActivity extends AppCompatActivity {
                                 }
                             });
                         } else {
-                            //pd.dismiss();
-                            //Toast.makeText(RegisterActivity.this, "You can't register with this email or password", Toast.LENGTH_SHORT).show();
-                            if_success.setText("You can't register with this email or password");
+                            pd.dismiss();
+                            Toast.makeText(RegisterActivity.this, "You can't register with this email or password", Toast.LENGTH_SHORT).show();
+                            //if_success.setText("You can't register with this email or password");
                         }
                     }
                 } );

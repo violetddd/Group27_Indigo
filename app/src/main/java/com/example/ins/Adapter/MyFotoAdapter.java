@@ -20,38 +20,38 @@ import org.jetbrains.annotations.NotNull;
 
 import java.util.List;
 
-public class MyFotoAdapter extends RecyclerView.Adapter<MyFotoAdapter.ViewHolder>{
+public class MyFotoAdapter extends RecyclerView.Adapter<MyFotoAdapter.ImageViewHolder>{
 
-    private Context context;
+    private Context mContext;
     private List<Post>mPosts;
 
-    public MyFotoAdapter(Context context, List<Post> mPosts) {
-        this.context = context;
-        this.mPosts = mPosts;
+    public MyFotoAdapter(Context context, List<Post> posts) {
+        mContext = context;
+        mPosts = posts;
     }
 
     @NonNull
     @Override
-    public ViewHolder onCreateViewHolder(@NonNull @NotNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(context).inflate(R.layout.fotos_item, parent,false);
-        return new MyFotoAdapter.ViewHolder(view);
+    public ImageViewHolder onCreateViewHolder(@NonNull @NotNull ViewGroup parent, int viewType) {
+        View view = LayoutInflater.from(mContext).inflate(R.layout.fotos_item, parent,false);
+        return new MyFotoAdapter.ImageViewHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull @NotNull ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull @NotNull ImageViewHolder holder, int position) {
         final Post post = mPosts.get(position);
-        Glide.with(context).load(post.getPostimage()).into(holder.post_image);
+        Glide.with(mContext).load(post.getPostimage()).into(holder.post_image);
 
-        /*holder.post_image.setOnClickListener(new View.OnClickListener(){
+        holder.post_image.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
-                SharedPreferences.Editor editor = context.getSharedPreferences("PREFS",Context.MODE_PRIVATE).edit();
+                SharedPreferences.Editor editor = mContext.getSharedPreferences("PREFS",Context.MODE_PRIVATE).edit();
                 editor.putString("postid", post.getPostid());
                 editor.apply();
 
-                ((FragmentActivity)context).getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new PostDetailFragment()).commit();
+                ((FragmentActivity)mContext).getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new PostDetailFragment()).commit();
             }
-        });*/
+        });
 
     }
 
@@ -60,11 +60,11 @@ public class MyFotoAdapter extends RecyclerView.Adapter<MyFotoAdapter.ViewHolder
         return mPosts.size();
     }
 
-    public class ViewHolder extends RecyclerView.ViewHolder{
+    public class ImageViewHolder extends RecyclerView.ViewHolder{
 
         public ImageView post_image;
 
-        public ViewHolder(@NonNull View itemView){
+        public ImageViewHolder( View itemView){
             super(itemView);
 
             post_image = itemView.findViewById(R.id.post_image);
