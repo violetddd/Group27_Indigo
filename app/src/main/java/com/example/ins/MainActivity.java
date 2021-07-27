@@ -4,11 +4,14 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.ImageView;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
+import com.example.ins.Fragment.EventsFragment;
 import com.example.ins.Fragment.HomeFragment;
 import com.example.ins.Fragment.NotificationFragment;
 import com.example.ins.Fragment.ProfileFragment;
@@ -19,11 +22,20 @@ import com.google.firebase.auth.FirebaseAuth;
 public class MainActivity extends AppCompatActivity {
     BottomNavigationView bottomNavigationView;
     Fragment selectedFragment = null;
+    //ImageView events;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
             setContentView(R.layout.activity_main);
+            //events = findViewById(R.id.events);
+
+            /*events.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    selectedFragment = new EventsFragment();
+                }
+            });*/
 
             bottomNavigationView = findViewById(R.id.bottom_navigation);
             bottomNavigationView.setOnNavigationItemSelectedListener(navigationItemSelectedListener);
@@ -43,6 +55,8 @@ public class MainActivity extends AppCompatActivity {
 
 
         }
+
+
 
         private BottomNavigationView.OnNavigationItemSelectedListener navigationItemSelectedListener =
                 new BottomNavigationView.OnNavigationItemSelectedListener() {

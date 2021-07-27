@@ -32,6 +32,7 @@ import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.StorageTask;
+import com.google.firebase.storage.UploadTask;
 import com.rengwuxian.materialedittext.MaterialEditText;
 import com.theartofdev.edmodo.cropper.CropImage;
 import com.theartofdev.edmodo.cropper.CropImageView;
@@ -127,16 +128,16 @@ public class EditProfileActivity extends AppCompatActivity {
     }
 
     private void uploadImage(){
-        ProgressDialog pd = new ProgressDialog(this);
+        final ProgressDialog pd = new ProgressDialog(this);
         pd.setMessage("Uploading");
         pd.show();
 
         if(mImageUri != null){
-            StorageReference filereference = storageRef.child(System.currentTimeMillis() + "."+ getFileExtension(mImageUri));
+            final StorageReference filereference = storageRef.child(System.currentTimeMillis() + "."+ getFileExtension(mImageUri));
             uploadTask = filereference.putFile(mImageUri);
-            uploadTask.continueWithTask(new Continuation() {
+            uploadTask.continueWithTask(new Continuation<UploadTask.TaskSnapshot,Task<Uri>>() {
                 @Override
-                public Object then(@NonNull @NotNull Task task) throws Exception {
+                public Task<Uri> then(@NonNull Task<UploadTask.TaskSnapshot> task) throws Exception {
                     if(!task.isSuccessful()){
                         throw task.getException();
                     }
@@ -169,12 +170,12 @@ public class EditProfileActivity extends AppCompatActivity {
                 }
             });
         } else {
-            Toast.makeText(this,"No iamge selected", Toast.LENGTH_SHORT).show();
+            Toast.makeText(EditProfileActivity.this,"No iamge selected", Toast.LENGTH_SHORT).show();
         }
     }
 
     @Override
-    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data){
+    protected void onActivityResult(int requestCode, int resultCode, Intent data){
         super.onActivityResult(requestCode, resultCode, data);
 
         if(requestCode == CropImage.CROP_IMAGE_ACTIVITY_REQUEST_CODE && resultCode == RESULT_OK){
@@ -182,6 +183,7 @@ public class EditProfileActivity extends AppCompatActivity {
             mImageUri = result.getUri();
 
             uploadImage();
+
         } else {
             Toast.makeText(this, "Something gone wrong!", Toast.LENGTH_SHORT).show();
 
