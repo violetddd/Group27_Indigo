@@ -1,5 +1,6 @@
 package com.example.ins.Fragment;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -7,7 +8,9 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
+import com.example.ins.MusicActivity;
 import com.example.ins.R;
 
 /**
@@ -25,6 +28,8 @@ public class NotificationFragment extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+
+    Button faqPage_btn, musicPage_btn, moviePage_btn,galleryPage_btn;
 
     public NotificationFragment() {
         // Required empty public constructor
@@ -61,6 +66,17 @@ public class NotificationFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_notification, container, false);
+
+       View v = inflater.inflate(R.layout.fragment_notification, container, false);
+
+        musicPage_btn = v.findViewById(R.id.go_to_music);
+        musicPage_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getActivity(), MusicActivity.class));
+            }
+        });
+
+        return v;
     }
 }
