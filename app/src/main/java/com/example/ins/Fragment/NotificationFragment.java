@@ -10,6 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
+import com.example.ins.FAQActivity;
 import com.example.ins.MusicActivity;
 import com.example.ins.R;
 
@@ -74,6 +75,14 @@ public class NotificationFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(getActivity(), MusicActivity.class));
+            }
+        });
+
+        faqPage_btn = v.findViewById(R.id.go_to_FAQ);
+        faqPage_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getActivity(), FAQActivity.class));
             }
         });
 
