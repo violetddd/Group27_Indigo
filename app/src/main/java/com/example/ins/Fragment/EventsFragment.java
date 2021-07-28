@@ -3,12 +3,20 @@ package com.example.ins.Fragment;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 import com.example.ins.R;
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
+
+import java.lang.reflect.Type;
+import java.util.List;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -16,6 +24,10 @@ import com.example.ins.R;
  * create an instance of this fragment.
  */
 public class EventsFragment extends Fragment {
+    public List<EventResponse> events;
+    public List<EventDetailResponse> eventDetailResponses;
+    private RecyclerView mRecyclerView;
+    private EventsAdapter mAdapter;
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -61,6 +73,50 @@ public class EventsFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_events, container, false);
+        View view = inflater.inflate(R.layout.fragment_events,container,false);
+
+        mRecyclerView = (RecyclerView) view.findViewById(R.id.rvEvent);
+        mRecyclerView.setHasFixedSize(true);
+        mRecyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
+
+        //team name API, same API provider of player  that's why they can match easily
+        Gson gson = new Gson();
+        Type type = new TypeToken<List<EventDetailResponse>>(){}.getType();
+        eventDetailResponses = gson.fromJson(EventDetailResponse.json1,type);
+        Type type1 = new TypeToken<List<EventResponse>>(){}.getType();
+        events = gson.fromJson(EventResponse.json,type1);
+
+
+
+        //mAdapter = new EventsAdapter(events,getActivity());
+        mAdapter = new EventsAdapter(events,eventDetailResponses,this.getActivity());
+        //mAdapter = new EventsAdapter(eventDetailResponses,getActivity());
+        mRecyclerView.setAdapter(mAdapter);
+
+        Button bt_date = view.findViewById(R.id.sort_date);
+        bt_date.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mAdapter.sortbydate();
+            }
+        });
+
+        Button bt_cost = view.findViewById(R.id.sort_cost);
+        bt_cost.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mAdapter.sortbycost();
+            }
+        });
+        Button bt_state = view.findViewById(R.id.sort_state);
+        bt_state.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mAdapter.sortbystate();
+            }
+        });
+
+        return view;
+
     }
 }
