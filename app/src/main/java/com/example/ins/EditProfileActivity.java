@@ -161,9 +161,9 @@ public class EditProfileActivity extends AppCompatActivity {
 
                         reference.updateChildren(map1);
                         pd.dismiss();
-                        FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
-                        ft.replace(R.id.fragment_container, new ProfileFragment());
-                        ft.commit();
+                        //FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+                        //ft.replace(R.id.fragment_container, new ProfileFragment());
+                        //ft.commit();
 
                     } else {
                         Toast.makeText(EditProfileActivity.this,"Failed",Toast.LENGTH_SHORT).show();
