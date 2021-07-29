@@ -103,10 +103,11 @@ public class CommentsActivity extends AppCompatActivity {
 
         HashMap<String,Object> hashMap = new HashMap<>();
         hashMap.put("commentid",commentid);
-        hashMap.put("comments",addcomment.getText().toString());
+        hashMap.put("comment",addcomment.getText().toString());
         hashMap.put("publisher",firebaseUser.getUid());
 
         reference.child(commentid).setValue(hashMap);
+        //addNotification();
         addcomment.setText("");
 
     }
@@ -131,8 +132,8 @@ public class CommentsActivity extends AppCompatActivity {
     private void readComments(){
         DatabaseReference reference = FirebaseDatabase.getInstance().getReference("Comments").child(postid);
         //DatabaseReference test = FirebaseDatabase.getInstance().getReference("Comments").child(postid).child();
-        String ref = reference.toString();
-        System.out.println(ref+"hahahahah");
+        //String ref = reference.toString();
+        //System.out.println(ref+"hahahahah");
 
         reference.addValueEventListener(new ValueEventListener() {
             @Override
@@ -140,8 +141,9 @@ public class CommentsActivity extends AppCompatActivity {
                 commentList.clear();
                 for(DataSnapshot snapshot: dataSnapshot.getChildren()){
                     Comment comment = snapshot.getValue(Comment.class);
+                    System.out.println("comment: "+ comment.toString());
                     commentList.add(comment);
-                    //System.out.println(comment.toString());
+
 
                 }
 

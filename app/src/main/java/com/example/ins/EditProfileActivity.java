@@ -3,6 +3,8 @@ package com.example.ins;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.app.ProgressDialog;
 import android.content.ContentResolver;
@@ -17,6 +19,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
+import com.example.ins.Fragment.ProfileFragment;
 import com.example.ins.Model.User;
 import com.google.android.gms.tasks.Continuation;
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -158,6 +161,9 @@ public class EditProfileActivity extends AppCompatActivity {
 
                         reference.updateChildren(map1);
                         pd.dismiss();
+                        FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+                        ft.replace(R.id.fragment_container, new ProfileFragment());
+                        ft.commit();
 
                     } else {
                         Toast.makeText(EditProfileActivity.this,"Failed",Toast.LENGTH_SHORT).show();

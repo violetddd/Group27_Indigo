@@ -152,7 +152,7 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.ImageViewHolde
             });
 
 
-            /*viewHolder.post_image.setOnClickListener(new View.OnClickListener(){
+            viewHolder.post_image.setOnClickListener(new View.OnClickListener(){
 
                 @Override
                 public void onClick(View view) {
@@ -162,7 +162,7 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.ImageViewHolde
 
                     ((FragmentActivity)mContext).getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new PostDetailFragment()).commit();
                 }
-            });*/
+            });
 
 
 
@@ -446,6 +446,7 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.ImageViewHolde
                             hashMap.put("description",editText.getText().toString());
 
                             FirebaseDatabase.getInstance().getReference("Posts").child(postid).updateChildren(hashMap);
+
 
                         }
                     });
