@@ -23,6 +23,9 @@ public class EventDetailResponse {
     @SerializedName("State")
     @Expose
     private String state;
+    @SerializedName("Date_for_sort")
+    @Expose
+    private String dateForSort;
     @SerializedName("Date")
     @Expose
     private String date;
@@ -87,6 +90,14 @@ public class EventDetailResponse {
         this.state = state;
     }
 
+    public String getDateForSort() {
+        return dateForSort;
+    }
+
+    public void setDateForSort(String dateForSort) {
+        this.dateForSort = dateForSort;
+    }
+
     public String getDate() {
         return date;
     }
@@ -137,6 +148,7 @@ public class EventDetailResponse {
             "    \"longitude\": 115.859982,\n" +
             "    \"Location\": \"State Library of Western Australia - The Nook  WA\",\n" +
             "    \"State\": \"WA\",\n" +
+            "    \"Date_for_sort\": \"2021/5/21\",\n" +
             "    \"Date\": \"21/05/2021 - 9:00am to 25/07/2021 - 5:30pm\",\n" +
             "    \"Cost of entry\": \"FREE\",\n" +
             "    \"Fee\": 0,\n" +
@@ -150,6 +162,7 @@ public class EventDetailResponse {
             "    \"longitude\": 115.8568781,\n" +
             "    \"Location\": \"South Australia various venues, communities  SA\",\n" +
             "    \"State\": \"SA\",\n" +
+            "    \"Date_for_sort\": \"2021/5/24\",\n" +
             "    \"Date\": \"24/05/2021 - 1:15pm to 01/08/2021 - 1:15pm\",\n" +
             "    \"Cost of entry\": \"Free and Costed events for Public and internal events\",\n" +
             "    \"Fee\": 0,\n" +
@@ -163,6 +176,7 @@ public class EventDetailResponse {
             "    \"longitude\": 152.994673,\n" +
             "    \"Location\": \"The Centre Beaudesert  Qld\",\n" +
             "    \"State\": \"Qld\",\n" +
+            "    \"Date_for_sort\": \"2021/6/1\",\n" +
             "    \"Date\": \"01/06/2021 - 10:00am to 14/07/2021 - 4:00pm\",\n" +
             "    \"Cost of entry\": \"FREE\",\n" +
             "    \"Fee\": 0,\n" +
@@ -176,6 +190,7 @@ public class EventDetailResponse {
             "    \"longitude\": 115.859982,\n" +
             "    \"Location\": \"State Library of Western Australia -The Story Place Gallery   WA\",\n" +
             "    \"State\": \"WA\",\n" +
+            "    \"Date_for_sort\": \"2021/6/11\",\n" +
             "    \"Date\": \"11/06/2021 - 9:00pm to 29/08/2021 - 5:30pm\",\n" +
             "    \"Cost of entry\": \"FREE\",\n" +
             "    \"Fee\": 0,\n" +
@@ -189,6 +204,7 @@ public class EventDetailResponse {
             "    \"longitude\": 0,\n" +
             "    \"Location\": \"N/A\",\n" +
             "    \"State\": \"A\",\n" +
+            "    \"Date_for_sort\": \"2021/6/21\",\n" +
             "    \"Date\": \"21/06/2021 - 9:00am to 25/07/2021 - 11:00pm\",\n" +
             "    \"Cost of entry\": \"FREE\",\n" +
             "    \"Fee\": 0,\n" +
@@ -202,6 +218,7 @@ public class EventDetailResponse {
             "    \"longitude\": 145.5914287,\n" +
             "    \"Location\": \"ART SPACE WONTHAGGI. THE CENTENNIAL CENTRE 1 BENT ST WONTHAGGI VIC\",\n" +
             "    \"State\": \"VIC\",\n" +
+            "    \"Date_for_sort\": \"2021/6/22\",\n" +
             "    \"Date\": \"22/06/2021 - 10:00am to 18/07/2021 - 10:00am\",\n" +
             "    \"Cost of entry\": \"FREE\",\n" +
             "    \"Fee\": 0,\n" +
@@ -215,6 +232,7 @@ public class EventDetailResponse {
             "    \"longitude\": 149.1067293,\n" +
             "    \"Location\": \"Australian National Botanic Gardens  ACT\",\n" +
             "    \"State\": \"ACT\",\n" +
+            "    \"Date_for_sort\": \"2021/6/26\",\n" +
             "    \"Date\": \"26/06/2021 - 8:30am to 25/07/2021 - 5:00pm\",\n" +
             "    \"Cost of entry\": \"FREE\",\n" +
             "    \"Fee\": 0,\n" +
@@ -228,6 +246,7 @@ public class EventDetailResponse {
             "    \"longitude\": 138.0093152,\n" +
             "    \"Location\": \"Port Pirie Regional Art Gallery 3 Wandearah Road Port Pirie  SA\",\n" +
             "    \"State\": \"SA\",\n" +
+            "    \"Date_for_sort\": \"2021/6/28\",\n" +
             "    \"Date\": \"28/06/2021 - 9:00am to 16/07/2021 - 5:00pm\",\n" +
             "    \"Cost of entry\": \"FREE\",\n" +
             "    \"Fee\": 0,\n" +
@@ -241,6 +260,7 @@ public class EventDetailResponse {
             "    \"longitude\": 144.9456964,\n" +
             "    \"Location\": \"West End Art Space   Vic\",\n" +
             "    \"State\": \"Vic\",\n" +
+            "    \"Date_for_sort\": \"2021/7/1\",\n" +
             "    \"Date\": \"01/07/2021 - 8:00am to 14/07/2021 - 4:00pm\",\n" +
             "    \"Cost of entry\": \"FREE\",\n" +
             "    \"Fee\": 0,\n" +
@@ -254,6 +274,7 @@ public class EventDetailResponse {
             "    \"longitude\": 115.8590965,\n" +
             "    \"Location\": \"City of Perth Library  WA\",\n" +
             "    \"State\": \"WA\",\n" +
+            "    \"Date_for_sort\": \"2021/7/1\",\n" +
             "    \"Date\": \"01/07/2021 - 8:00am to 31/07/2021 - 4:00pm\",\n" +
             "    \"Cost of entry\": \"FREE\",\n" +
             "    \"Fee\": 0,\n" +
@@ -267,6 +288,7 @@ public class EventDetailResponse {
             "    \"longitude\": 0,\n" +
             "    \"Location\": \"Home   NSW\",\n" +
             "    \"State\": \"NSW\",\n" +
+            "    \"Date_for_sort\": \"2021/7/2\",\n" +
             "    \"Date\": \"02/07/2021 - 3:00pm to 12/08/2021 - 5:00pm\",\n" +
             "    \"Cost of entry\": \"FREE\",\n" +
             "    \"Fee\": 0,\n" +
@@ -280,6 +302,7 @@ public class EventDetailResponse {
             "    \"longitude\": 139.1368876,\n" +
             "    \"Location\": \"Monarto Safari Park  SA\",\n" +
             "    \"State\": \"SA\",\n" +
+            "    \"Date_for_sort\": \"2021/7/3\",\n" +
             "    \"Date\": \"03/07/2021 - 9:30am to 19/07/2021 - 5:00pm\",\n" +
             "    \"Cost of entry\": \"Activities included with park entry ticket\",\n" +
             "    \"Fee\": 0,\n" +
@@ -293,6 +316,7 @@ public class EventDetailResponse {
             "    \"longitude\": 144.7453786,\n" +
             "    \"Location\": \"The Foundry Arts Space, Murray Esplanade, Echuca, Vic  Vic\",\n" +
             "    \"State\": \"Vic\",\n" +
+            "    \"Date_for_sort\": \"2021/7/5\",\n" +
             "    \"Date\": \"05/07/2021 - 10:00am to 18/07/2021 - 4:00pm\",\n" +
             "    \"Cost of entry\": \"FREE\",\n" +
             "    \"Fee\": 0,\n" +
@@ -306,6 +330,7 @@ public class EventDetailResponse {
             "    \"longitude\": 0,\n" +
             "    \"Location\": \"Maitland NSW  NSW\",\n" +
             "    \"State\": \"NSW\",\n" +
+            "    \"Date_for_sort\": \"2021/7/6\",\n" +
             "    \"Date\": \"06/07/2021 - 8:15am to 21/07/2021 - 5:00pm\",\n" +
             "    \"Cost of entry\": \"FREE\",\n" +
             "    \"Fee\": 0,\n" +
@@ -319,6 +344,7 @@ public class EventDetailResponse {
             "    \"longitude\": 151.5491236,\n" +
             "    \"Location\": \"The Shed, 1/5 Analby Place Maitland  NSW\",\n" +
             "    \"State\": \"NSW\",\n" +
+            "    \"Date_for_sort\": \"2021/7/6\",\n" +
             "    \"Date\": \"06/07/2021 - 8:30am to 16/07/2021 - 5:00pm\",\n" +
             "    \"Cost of entry\": \"FREE\",\n" +
             "    \"Fee\": 0,\n" +
@@ -332,6 +358,7 @@ public class EventDetailResponse {
             "    \"longitude\": 115.8590676,\n" +
             "    \"Location\": \"Art Gallery of WA  WA\",\n" +
             "    \"State\": \"WA\",\n" +
+            "    \"Date_for_sort\": \"2021/7/6\",\n" +
             "    \"Date\": \"06/07/2021 - 10:00am to 16/07/2021 - 5:00pm\",\n" +
             "    \"Cost of entry\": \"Storytelling is FREE, Workshops are Ticketed\",\n" +
             "    \"Fee\": 0,\n" +
@@ -345,6 +372,7 @@ public class EventDetailResponse {
             "    \"longitude\": 151.9504318,\n" +
             "    \"Location\": \"Toowoomba Regional Art Gallery, 531 Ruthven Street Toowoomba  Qld\",\n" +
             "    \"State\": \"Qld\",\n" +
+            "    \"Date_for_sort\": \"2021/7/6\",\n" +
             "    \"Date\": \"06/07/2021 - 10:30am to 22/08/2021 - 3:30pm\",\n" +
             "    \"Cost of entry\": \"FREE\",\n" +
             "    \"Fee\": 0,\n" +
@@ -358,6 +386,7 @@ public class EventDetailResponse {
             "    \"longitude\": 0,\n" +
             "    \"Location\": \"By appointment  Vic\",\n" +
             "    \"State\": \"Vic\",\n" +
+            "    \"Date_for_sort\": \"2021/7/6\",\n" +
             "    \"Date\": \"06/07/2021 - 6:00pm to 30/09/2021 - 5:00pm\",\n" +
             "    \"Cost of entry\": \"FREE\",\n" +
             "    \"Fee\": 0,\n" +
@@ -371,6 +400,7 @@ public class EventDetailResponse {
             "    \"longitude\": 115.856799,\n" +
             "    \"Location\": \"Heath Ledger Theatre, State Theatre Centre of WA  WA\",\n" +
             "    \"State\": \"WA\",\n" +
+            "    \"Date_for_sort\": \"2021/7/10\",\n" +
             "    \"Date\": \"10/07/2021 - 7:30pm to 01/08/2021 - 10:00pm\",\n" +
             "    \"Cost of entry\": \"$36 - $93\",\n" +
             "    \"Fee\": 36,\n" +
@@ -384,6 +414,7 @@ public class EventDetailResponse {
             "    \"longitude\": 115.8502329,\n" +
             "    \"Location\": \"Curtin University MakerSpace  WA\",\n" +
             "    \"State\": \"WA\",\n" +
+            "    \"Date_for_sort\": \"2021/7/12\",\n" +
             "    \"Date\": \"12/07/2021 - 9:00am to 16/07/2021 - 5:00pm\",\n" +
             "    \"Cost of entry\": \"FREE\",\n" +
             "    \"Fee\": 0,\n" +
@@ -397,6 +428,7 @@ public class EventDetailResponse {
             "    \"longitude\": 0,\n" +
             "    \"Location\": \"Online  NSW\",\n" +
             "    \"State\": \"NSW\",\n" +
+            "    \"Date_for_sort\": \"2021/7/14\",\n" +
             "    \"Date\": \"14/07/2021 - 12:00pm to 1:30pm\",\n" +
             "    \"Cost of entry\": \"FREE\",\n" +
             "    \"Fee\": 0,\n" +
@@ -410,6 +442,7 @@ public class EventDetailResponse {
             "    \"longitude\": 0,\n" +
             "    \"Location\": \"Online  NSW\",\n" +
             "    \"State\": \"NSW\",\n" +
+            "    \"Date_for_sort\": \"2021/7/14\",\n" +
             "    \"Date\": \"14/07/2021 - 7:00pm to 8:00pm\",\n" +
             "    \"Cost of entry\": \"FREE\",\n" +
             "    \"Fee\": 0,\n" +
@@ -423,6 +456,7 @@ public class EventDetailResponse {
             "    \"longitude\": 0,\n" +
             "    \"Location\": \"Online via Zoom  Vic\",\n" +
             "    \"State\": \"Vic\",\n" +
+            "    \"Date_for_sort\": \"2021/7/15\",\n" +
             "    \"Date\": \"15/07/2021 - 4:00pm to 4:45pm\",\n" +
             "    \"Cost of entry\": \"FREE\",\n" +
             "    \"Fee\": 0,\n" +
@@ -436,6 +470,7 @@ public class EventDetailResponse {
             "    \"longitude\": 152.6440592,\n" +
             "    \"Location\": \"The Pavilion, Gympie Showgrounds, Exhibition Road, Gympie Qld 4570  Qld\",\n" +
             "    \"State\": \"Qld\",\n" +
+            "    \"Date_for_sort\": \"2021/7/16\",\n" +
             "    \"Date\": \"16/07/2021 - 9:30am to 2:00pm\",\n" +
             "    \"Cost of entry\": \"FREE\",\n" +
             "    \"Fee\": 0,\n" +
@@ -449,6 +484,7 @@ public class EventDetailResponse {
             "    \"longitude\": 153.4022035,\n" +
             "    \"Location\": \"Dunwich State School  Qld\",\n" +
             "    \"State\": \"Qld\",\n" +
+            "    \"Date_for_sort\": \"2021/7/16\",\n" +
             "    \"Date\": \"16/07/2021 - 10:30am to 2:00pm\",\n" +
             "    \"Cost of entry\": \"FREE\",\n" +
             "    \"Fee\": 0,\n" +
@@ -462,6 +498,7 @@ public class EventDetailResponse {
             "    \"longitude\": 115.9730959,\n" +
             "    \"Location\": \"Ellenbrook Woodlake Amphitheatre  WA\",\n" +
             "    \"State\": \"WA\",\n" +
+            "    \"Date_for_sort\": \"2021/7/17\",\n" +
             "    \"Date\": \"17/07/2021 - 3:00pm to 6:30pm\",\n" +
             "    \"Cost of entry\": \"FREE\",\n" +
             "    \"Fee\": 0,\n" +
@@ -475,6 +512,7 @@ public class EventDetailResponse {
             "    \"longitude\": 115.9730959,\n" +
             "    \"Location\": \"Woodlake Amphitheater & Park, Fortescue Place, Ellenbrook WA  WA\",\n" +
             "    \"State\": \"WA\",\n" +
+            "    \"Date_for_sort\": \"2021/7/17\",\n" +
             "    \"Date\": \"17/07/2021 - 5:45pm to 6:45pm\",\n" +
             "    \"Cost of entry\": \"Free- Time: 3-6.30pm\",\n" +
             "    \"Fee\": 0,\n" +
@@ -488,6 +526,7 @@ public class EventDetailResponse {
             "    \"longitude\": 0,\n" +
             "    \"Location\": \"Virtual/Online  ACT\",\n" +
             "    \"State\": \"ACT\",\n" +
+            "    \"Date_for_sort\": \"2021/7/20\",\n" +
             "    \"Date\": \"20/07/2021 - 12:30pm to 1:00pm\",\n" +
             "    \"Cost of entry\": \"FREE\",\n" +
             "    \"Fee\": 0,\n" +
@@ -501,6 +540,7 @@ public class EventDetailResponse {
             "    \"longitude\": 116.0070409,\n" +
             "    \"Location\": \"Winfield Street, Morawa  WA\",\n" +
             "    \"State\": \"WA\",\n" +
+            "    \"Date_for_sort\": \"2021/7/21\",\n" +
             "    \"Date\": \"21/07/2021 - 10:00am to 2:00pm\",\n" +
             "    \"Cost of entry\": \"FREE\",\n" +
             "    \"Fee\": 0,\n" +
@@ -514,6 +554,7 @@ public class EventDetailResponse {
             "    \"longitude\": 130.8780225,\n" +
             "    \"Location\": \"Darwin Football Stadium Larrakia Park  NT\",\n" +
             "    \"State\": \"NT\",\n" +
+            "    \"Date_for_sort\": \"2021/7/21\",\n" +
             "    \"Date\": \"21/07/2021 - 5:00pm to 10:00pm\",\n" +
             "    \"Cost of entry\": \"FREE\",\n" +
             "    \"Fee\": 0,\n" +
@@ -527,6 +568,7 @@ public class EventDetailResponse {
             "    \"longitude\": 115.8595221,\n" +
             "    \"Location\": \"The Square Mirrabooka  WA\",\n" +
             "    \"State\": \"WA\",\n" +
+            "    \"Date_for_sort\": \"2021/7/24\",\n" +
             "    \"Date\": \"24/07/2021 - 11:00am to 12:30pm\",\n" +
             "    \"Cost of entry\": \"FREE\",\n" +
             "    \"Fee\": 0,\n" +
@@ -540,6 +582,7 @@ public class EventDetailResponse {
             "    \"longitude\": 115.7843543,\n" +
             "    \"Location\": \"Williamstown Library and Online  Vic\",\n" +
             "    \"State\": \"Vic\",\n" +
+            "    \"Date_for_sort\": \"2021/7/29\",\n" +
             "    \"Date\": \"29/07/2021 - 6:30pm to 7:30pm\",\n" +
             "    \"Cost of entry\": \"FREE\",\n" +
             "    \"Fee\": 0,\n" +
@@ -553,6 +596,7 @@ public class EventDetailResponse {
             "    \"longitude\": 115.8036458,\n" +
             "    \"Location\": \"Wembley Sport Park  WA\",\n" +
             "    \"State\": \"WA\",\n" +
+            "    \"Date_for_sort\": \"2021/7/30\",\n" +
             "    \"Date\": \"30/07/2021 - 4:30pm to 9:00pm\",\n" +
             "    \"Cost of entry\": \"FREE\",\n" +
             "    \"Fee\": 0,\n" +
@@ -566,6 +610,7 @@ public class EventDetailResponse {
             "    \"longitude\": 153.2116198,\n" +
             "    \"Location\": \"Beenleigh Historical Village  Qld\",\n" +
             "    \"State\": \"Qld\",\n" +
+            "    \"Date_for_sort\": \"2021/7/31\",\n" +
             "    \"Date\": \"31/07/2021 - 10:00am to 2:30pm\",\n" +
             "    \"Cost of entry\": \"FREE. Gold Coin donation appreciated\",\n" +
             "    \"Fee\": 0,\n" +
@@ -579,6 +624,7 @@ public class EventDetailResponse {
             "    \"longitude\": 116.0076964,\n" +
             "    \"Location\": \"MOORA PERFORMING ARTS CENTER   WA\",\n" +
             "    \"State\": \"WA\",\n" +
+            "    \"Date_for_sort\": \"2021/7/31\",\n" +
             "    \"Date\": \"31/07/2021 - 5:00pm to 10:00pm\",\n" +
             "    \"Cost of entry\": \"Adults $15             School aged Children $5\",\n" +
             "    \"Fee\": 15,\n" +
@@ -592,6 +638,7 @@ public class EventDetailResponse {
             "    \"longitude\": 150.8273217,\n" +
             "    \"Location\": \"Dharawal National Park  NSW\",\n" +
             "    \"State\": \"NSW\",\n" +
+            "    \"Date_for_sort\": \"2021/9/11\",\n" +
             "    \"Date\": \"11/09/2021 - 9:00am to 10:30am\",\n" +
             "    \"Cost of entry\": \"$15 per person, $10 per child\",\n" +
             "    \"Fee\": 15,\n" +
@@ -605,6 +652,7 @@ public class EventDetailResponse {
             "    \"longitude\": 150.8273217,\n" +
             "    \"Location\": \"Dharawal National Park  NSW\",\n" +
             "    \"State\": \"NSW\",\n" +
+            "    \"Date_for_sort\": \"2021/9/11\",\n" +
             "    \"Date\": \"11/09/2021 - 9:00am to 10:30am\",\n" +
             "    \"Cost of entry\": \"$35 per person, $18 per child\",\n" +
             "    \"Fee\": 35,\n" +
@@ -618,6 +666,7 @@ public class EventDetailResponse {
             "    \"longitude\": 153.1019027,\n" +
             "    \"Location\": \"Logan Gardens and Water Park, 12 Civic Parade, Logan Central. Qld\",\n" +
             "    \"State\": \"Qld\",\n" +
+            "    \"Date_for_sort\": \"2021/9/21\",\n" +
             "    \"Date\": \"21/09/2021 - 9:00am to 2:30pm\",\n" +
             "    \"Cost of entry\": \"FREE\",\n" +
             "    \"Fee\": 0,\n" +
@@ -631,6 +680,7 @@ public class EventDetailResponse {
             "    \"longitude\": 149.1468755,\n" +
             "    \"Location\": \"Fitzroy Pavilion, Exhibition Park ACT\",\n" +
             "    \"State\": \"ACT\",\n" +
+            "    \"Date_for_sort\": \"2021/10/30\",\n" +
             "    \"Date\": \"30/10/2021 - 10:30am to 2:30pm\",\n" +
             "    \"Cost of entry\": \"FREE\",\n" +
             "    \"Fee\": 0,\n" +
