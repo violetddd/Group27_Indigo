@@ -141,7 +141,7 @@ public class CommentsActivity extends AppCompatActivity {
                 commentList.clear();
                 for(DataSnapshot snapshot: dataSnapshot.getChildren()){
                     Comment comment = snapshot.getValue(Comment.class);
-                    System.out.println("comment: "+ comment.toString());
+                    //System.out.println("comment: "+ comment.toString());
                     commentList.add(comment);
 
 

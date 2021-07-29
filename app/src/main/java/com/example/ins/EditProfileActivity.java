@@ -75,7 +75,7 @@ public class EditProfileActivity extends AppCompatActivity {
         DatabaseReference reference = FirebaseDatabase.getInstance().getReference("Users").child(firebaseUser.getUid());
         reference.addValueEventListener(new ValueEventListener() {
             @Override
-            public void onDataChange(@NonNull @NotNull DataSnapshot snapshot) {
+            public void onDataChange( DataSnapshot snapshot) {
                 User user = snapshot.getValue(User.class);
                 fullname.setText(user.getFullname());
                 username.setText(user.getUsername());
@@ -149,7 +149,7 @@ public class EditProfileActivity extends AppCompatActivity {
                 }
             }).addOnCompleteListener(new OnCompleteListener<Uri>() {
                 @Override
-                public void onComplete(@NonNull @NotNull Task<Uri>task) {
+                public void onComplete(@NonNull Task<Uri>task) {
                     if(task.isSuccessful()){
                         Uri downloadUri = task.getResult();
                         String miUrlOK = downloadUri.toString();

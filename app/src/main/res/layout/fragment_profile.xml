@@ -35,7 +35,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/options"
-                    android:src="@drawable/ic_options"
+                    android:src="@drawable/ic_more"
                     android:layout_alignParentEnd="true"
                     android:layout_marginEnd="10dp"/>
                 
@@ -228,8 +228,9 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:id="@+id/my_fotos"
-                    android:src="@drawable/ic_grid"
+                    android:src="@drawable/ic_urphotos"
                     style="?android:attr/buttonBarButtonStyle"/>
+
 
                 <ImageButton
                     android:layout_width="0dp"

@@ -124,9 +124,9 @@ public class ProfileFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 String button = edit_profile.getText().toString();
-                //System.out.println(button);
+
                 if (button.equals("Edit Profile")) {
-                    //System.out.println("hi");
+
                     startActivity(new Intent(getContext(), EditProfileActivity.class));
 
                 } else if (button.equals("follow")) {
@@ -204,7 +204,7 @@ public class ProfileFragment extends Fragment {
 
                 User user = snapshot.getValue(User.class);
                 Glide.with(getContext()).load(user.getImageurl()).into(image_profile);
-                username.setText(user.getUsername());
+                username.setText("Kaya, "+user.getUsername()+"! ");
                 fullname.setText(user.getFullname());
                 bio.setText(user.getBio());
             }

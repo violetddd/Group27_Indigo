@@ -316,7 +316,7 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.ImageViewHolde
             reference.addValueEventListener(new ValueEventListener() {
                 @Override
                 public void onDataChange(@NonNull @NotNull DataSnapshot snapshot) {
-                    comments.setText("View All"+snapshot.getChildrenCount()+" Comments");
+                    comments.setText("View All "+snapshot.getChildrenCount()+" Comments");
                 }
 
                 @Override
@@ -359,7 +359,7 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.ImageViewHolde
             reference.addValueEventListener(new ValueEventListener() {
                 @Override
                 public void onDataChange( DataSnapshot dataSnapshot) {
-                    likes.setText(dataSnapshot.getChildrenCount()+"likes");
+                    likes.setText(dataSnapshot.getChildrenCount()+" likes");
 
                     //likes.setText("11 likes");
                 }
