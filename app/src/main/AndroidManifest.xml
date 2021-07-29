@@ -14,7 +14,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Ins">
-        <activity android:name=".GalleryDetailActivity"></activity>
+        <activity android:name=".MovieDetailActivity"></activity>
+        <activity android:name=".MovieActivity" />
+        <activity android:name=".GalleryDetailActivity" />
         <activity android:name=".GalleryActivity" />
         <activity android:name=".ReconciliationActivity" />
         <activity android:name=".CommemorationActivity" />

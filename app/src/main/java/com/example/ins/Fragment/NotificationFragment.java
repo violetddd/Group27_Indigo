@@ -12,6 +12,7 @@ import android.widget.Button;
 
 import com.example.ins.FAQActivity;
 import com.example.ins.GalleryActivity;
+import com.example.ins.MovieActivity;
 import com.example.ins.MusicActivity;
 import com.example.ins.R;
 
@@ -92,6 +93,14 @@ public class NotificationFragment extends Fragment {
            @Override
            public void onClick(View v) {
                startActivity(new Intent(getActivity(), GalleryActivity.class));
+           }
+       });
+
+       moviePage_btn = v.findViewById(R.id.go_to_movies);
+       moviePage_btn.setOnClickListener(new View.OnClickListener() {
+           @Override
+           public void onClick(View v) {
+               startActivity(new Intent(getActivity(), MovieActivity.class));
            }
        });
 
