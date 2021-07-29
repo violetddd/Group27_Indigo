@@ -11,6 +11,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 
 import com.example.ins.FAQActivity;
+import com.example.ins.GalleryActivity;
 import com.example.ins.MusicActivity;
 import com.example.ins.R;
 
@@ -85,6 +86,14 @@ public class NotificationFragment extends Fragment {
                 startActivity(new Intent(getActivity(), FAQActivity.class));
             }
         });
+
+       galleryPage_btn = v.findViewById(R.id.go_to_gallery);
+       galleryPage_btn.setOnClickListener(new View.OnClickListener() {
+           @Override
+           public void onClick(View v) {
+               startActivity(new Intent(getActivity(), GalleryActivity.class));
+           }
+       });
 
         return v;
     }
