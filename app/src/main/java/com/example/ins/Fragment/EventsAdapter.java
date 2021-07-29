@@ -95,7 +95,7 @@ public class EventsAdapter extends RecyclerView.Adapter<com.example.ins.Fragment
             Collections.sort(mEventDetailResponses, new Comparator<EventDetailResponse>() {
                 @Override
                 public int compare(EventDetailResponse c1, EventDetailResponse c2) {
-                    return c2.getDate().compareTo(c1.getDate());
+                    return c1.getDateForSort().compareTo(c2.getDateForSort());
                 }
             });
         }
