@@ -3,6 +3,7 @@ package com.example.ins.Fragment;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Rect;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -10,6 +11,7 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.recyclerview.widget.StaggeredGridLayoutManager;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -85,8 +87,11 @@ public class ProfileFragment extends Fragment {
 
         recyclerView = view.findViewById(R.id.recycler_view);
         recyclerView.setHasFixedSize(true);
-        LinearLayoutManager linearLayoutManager = new GridLayoutManager(getContext(),3);
-        recyclerView.setLayoutManager(linearLayoutManager);
+
+        StaggeredGridLayoutManager layoutManager = new StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL);
+        recyclerView.setLayoutManager(layoutManager);
+        //LinearLayoutManager linearLayoutManager = new GridLayoutManager(getContext(),3);
+       // recyclerView.setLayoutManager(linearLayoutManager);
         postList= new ArrayList<>();
         myFotoAdapter = new MyFotoAdapter(getContext(),postList);
         recyclerView.setAdapter(myFotoAdapter);
@@ -95,8 +100,11 @@ public class ProfileFragment extends Fragment {
 
         recyclerView_saves = view.findViewById(R.id.recycler_view_save);
         recyclerView_saves.setHasFixedSize(true);
-        LinearLayoutManager linearLayoutManager_saves = new GridLayoutManager(getContext(),3);
-        recyclerView_saves.setLayoutManager(linearLayoutManager_saves);
+
+        StaggeredGridLayoutManager layoutManager_saves = new StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL);
+        recyclerView_saves.setLayoutManager(layoutManager_saves);
+       // LinearLayoutManager linearLayoutManager_saves = new GridLayoutManager(getContext(),3);
+        //recyclerView_saves.setLayoutManager(linearLayoutManager_saves);
         postList_saves= new ArrayList<>();
         myFotoAdapter_saves = new MyFotoAdapter(getContext(),postList_saves);
         recyclerView_saves.setAdapter(myFotoAdapter_saves);
@@ -358,6 +366,8 @@ public class ProfileFragment extends Fragment {
             }
         });
     }
+
+
 }
 
 

@@ -680,7 +680,7 @@ public class EventDetailResponse {
             "    \"longitude\": 149.1468755,\n" +
             "    \"Location\": \"Fitzroy Pavilion, Exhibition Park ACT\",\n" +
             "    \"State\": \"ACT\",\n" +
-            "    \"Date_for_sort\": \"2021/10/30\",\n" +
+            "    \"Date_for_sort\": \"2021/9/30\",\n" +
             "    \"Date\": \"30/10/2021 - 10:30am to 2:30pm\",\n" +
             "    \"Cost of entry\": \"FREE\",\n" +
             "    \"Fee\": 0,\n" +
