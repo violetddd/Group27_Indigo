@@ -4,32 +4,35 @@
        xmlns:tools="http://schemas.android.com/tools" 
        android:layout_width="match_parent" 
        android:layout_height="match_parent" 
-       android:gravity="center" 
-       android:padding= "12dp"
-       android:orientation="vertical" 
-       tools:context=".StartActivity"> 
-  
-<ImageView 
-        android:layout_width="wrap_content" 
-        android:layout_height="50dp" 
-        android:src="@drawable/logo"/> 
-// insert the logo image you find online and place it into the drawable file  
-  
-<Button 
-       android:layout_width="match_parent" 
-       android:layout_height="wrap_content" 
-       android:text="Log in" 
-       android:id="@+id/login" 
-       android:layout_marginTop="15dp"
-       android:background="@drawable/button_background"/> 
-  
-<Button 
-       android:layout_width="match_parent" 
-       android:layout_height="wrap_content" 
-       android:text="Register" 
-       android:id="@+id/register" 
-       android:layout_marginTop="15dp"
-       android:background="@drawable/button_background"/> 
+
+        android:orientation="vertical"
+        android:padding="60dp"
+       tools:context=".StartActivity">
+
+<ImageView
+    android:layout_width="150dp"
+    android:layout_height="144dp"
+    android:layout_gravity="center"
+        android:src="@drawable/logo2"/>
+// insert the logo image you find online and place it into the drawable file
+
+    <Button
+        android:id="@+id/login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/button_background"
+        android:text="Log in"
+        app:backgroundTint="#279A94 " />
+
+    <Button
+        android:id="@+id/register"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/button_background"
+        android:text="Register"
+        app:backgroundTint="#279A94 " />
   
 </LinearLayout> 
   

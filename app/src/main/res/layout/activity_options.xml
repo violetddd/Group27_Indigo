@@ -22,18 +22,25 @@
         android:background="@color/colorAccent"/>
 
     <TextView
+        android:id="@+id/logout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/logout"
-        android:text="Log Out"
-        android:textColor="@color/colorPrimaryDark"
         android:layout_margin="8dp"
-        android:textSize="18sp"/>
+        android:background="#279A94 "
+        android:text="Log Out"
+        android:textColor="@color/white"
+        android:textSize="18sp" />
 
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:background="@color/colorAccent"/>
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_gravity="center"
+        app:srcCompat="@drawable/logo2" />
 
 
 
