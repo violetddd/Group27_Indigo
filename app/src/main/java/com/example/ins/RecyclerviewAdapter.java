@@ -9,9 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.ViewFlipper;
 
-import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -50,7 +48,9 @@ public class RecyclerviewAdapter extends RecyclerView.Adapter<RecyclerviewAdapte
                 intent.putExtra("Location", mData.get(position).getLocation());
                 intent.putExtra("Description", mData.get(position).getDescription());
                 intent.putExtra("Thumbnail", mData.get(position).getThumbnail());
+                intent.putExtra("Link",mData.get(position).getLink());
                 mContext.startActivity(intent);
+
 
             }
         });

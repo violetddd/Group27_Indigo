@@ -15,15 +15,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Ins">
         <activity android:name=".MovieDetailActivity"></activity>
-        <activity android:name=".MovieActivity" />
         <activity android:name=".GalleryDetailActivity" />
-        <activity android:name=".GalleryActivity" />
         <activity android:name=".ReconciliationActivity" />
         <activity android:name=".CommemorationActivity" />
         <activity android:name=".HistoryActivity" />
         <activity android:name=".StolenGenActivity" />
         <activity android:name=".FAQActivity" />
-        <activity android:name=".MusicActivity" />
         <activity android:name=".OptionsActivity" />
         <activity android:name=".FollowerActivity" />
         <activity android:name=".EditProfileActivity" />

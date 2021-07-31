@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -42,6 +43,7 @@ public class GalleryDetailActivity extends AppCompatActivity {
         String Title = intent.getExtras().getString("Title");
         String Location = intent.getExtras().getString("Location");
         String Description = intent.getExtras().getString("Description");
+        String Link = intent.getExtras().getString("Link");
         int image = intent.getExtras().getInt("Thumbnail");
 
         //Set values
@@ -51,11 +53,12 @@ public class GalleryDetailActivity extends AppCompatActivity {
         img.setImageResource(image);
 
         btn_gallerydetail = (ImageView) findViewById(R.id.back_btn_g_detail);
-        btn_gallerydetail.setOnClickListener(new View.OnClickListener() {
+        mSearch.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent gdetailPage = new Intent (GalleryDetailActivity.this, GalleryActivity .class);
-                startActivity(gdetailPage);
+                Intent openUrlIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(Link));
+                startActivity(openUrlIntent);
+
             }
         });
 
@@ -74,4 +77,6 @@ public class GalleryDetailActivity extends AppCompatActivity {
 //        mSlideshow.setInAnimation(this, android.R.anim.slide_in_left);
 //        mSlideshow.setOutAnimation(this, android.R.anim.slide_out_right);
 //    }
+
+
 }

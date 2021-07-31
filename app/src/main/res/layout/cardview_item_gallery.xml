@@ -6,9 +6,9 @@
     android:layout_height="300dp"
     android:layout_margin="5dp"
     android:clickable="true"
+    android:elevation="10dp"
     android:foreground="?android:attr/selectableItemBackground"
-    cardview:cardCornerRadius="20dp"
-    android:elevation="10dp">
+    cardview:cardCornerRadius="20dp">
 
 
     <LinearLayout

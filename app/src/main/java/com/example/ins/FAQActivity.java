@@ -12,7 +12,7 @@ import com.example.ins.Fragment.NotificationFragment;
 
 public class FAQActivity extends AppCompatActivity {
 
-    Button btn_stolen, btn_history, btn_comm, btn_recon;
+    /*Button btn_stolen, btn_history, btn_comm, btn_recon;
     ImageView btn_back_faq;
 
     @Override
@@ -66,5 +66,5 @@ public class FAQActivity extends AppCompatActivity {
       //  });
 
 
-    }
+    }*/
 }

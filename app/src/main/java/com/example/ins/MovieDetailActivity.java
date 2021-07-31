@@ -28,13 +28,13 @@ public class MovieDetailActivity extends AppCompatActivity {
         setContentView(R.layout.activity_movie_detail);
 
         btn_movie_d = (ImageView)findViewById(R.id.back_btn_m_detail);
-        btn_movie_d.setOnClickListener(new View.OnClickListener() {
+        /*btn_movie_d.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent detailmovie = new Intent(MovieDetailActivity.this,MovieActivity.class);
                 startActivity(detailmovie);
             }
-        });
+        });*/
 
         mMovie = findViewById(R.id.tvMovie);
         mRelease = findViewById(R.id.tvRelease);
