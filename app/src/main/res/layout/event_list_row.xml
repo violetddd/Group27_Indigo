@@ -3,42 +3,43 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="300dp">
+    android:layout_height="245dp">
 
 
     <ImageView
         android:id="@+id/imageView6"
-        android:layout_width="399dp"
-        android:layout_height="281dp"
+        android:layout_width="402dp"
+        android:layout_height="226dp"
         android:layout_marginStart="6dp"
         android:layout_marginTop="8dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/round_anything" />
 
+
     <TextView
         android:id="@+id/event_date"
-        android:layout_width="202dp"
-        android:layout_height="61dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginLeft="24dp"
+        android:layout_width="195dp"
+        android:layout_height="51dp"
+        android:layout_marginStart="20dp"
         android:layout_marginBottom="8dp"
         android:singleLine="false"
         android:text="TextView"
         android:textColor="#000000"
+        android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/event_location"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/event_location"
-        android:layout_width="223dp"
-        android:layout_height="44dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginLeft="24dp"
+        android:layout_width="356dp"
+        android:layout_height="34dp"
+        android:layout_marginStart="20dp"
         android:layout_marginBottom="8dp"
         android:singleLine="false"
         android:text="TextView"
         android:textColor="#000000"
+        android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/event_cost"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -46,8 +47,8 @@
         android:id="@+id/event_name"
         android:layout_width="193dp"
         android:layout_height="46dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginBottom="16dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="20dp"
         android:singleLine="false"
         android:text="TextView"
         android:textColor="#000000"
@@ -58,50 +59,47 @@
 
     <TextView
         android:id="@+id/event_cost"
-        android:layout_width="223dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginLeft="24dp"
-        android:layout_marginBottom="32dp"
+        android:layout_width="224dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="18dp"
         android:singleLine="false"
         android:text="TextView"
         android:textColor="#000000"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <ImageView
         android:id="@+id/event_img"
-        android:layout_width="165dp"
-        android:layout_height="170dp"
-        android:layout_marginEnd="16dp"
+        android:layout_width="191dp"
+        android:layout_height="137dp"
+        android:layout_marginEnd="4dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.195"
+        app:layout_constraintVertical_bias="0.148"
         app:srcCompat="@drawable/ic_launcher_background" />
 
     <ImageView
         android:id="@+id/map"
-        android:layout_width="117dp"
-        android:layout_height="104dp"
-        android:layout_marginTop="184dp"
-        android:layout_marginEnd="40dp"
+        android:layout_width="79dp"
+        android:layout_height="78dp"
+        android:layout_marginTop="160dp"
+        android:layout_marginEnd="4dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/gmap" />
-
+        app:srcCompat="@drawable/map_logo_white" />
 
     <ProgressBar
         android:id="@+id/progressBar"
         style="?android:attr/progressBarStyleHorizontal"
         android:layout_width="187dp"
         android:layout_height="3dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="88dp"
-        android:layout_marginEnd="8dp"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="73dp"
         android:background="#000000"
         android:progressTint="#000000"
-        app:layout_constraintEnd_toStartOf="@+id/event_img"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
