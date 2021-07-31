@@ -71,10 +71,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
-        android:background="@drawable/button_background"
         android:text="Register"
-        android:textColor="@color/white"
-        app:backgroundTint="#279A94 " />
+        android:background="@drawable/transparent_bg_bordered_button"
+        android:textColor="@color/teal_700"
+        app:backgroundTint="#279A94" />
 
     <TextView
         android:id="@+id/txt_login"

@@ -21,18 +21,21 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
-        android:background="@drawable/button_background"
-        android:text="Log in"
-        app:backgroundTint="#279A94 " />
+        android:background="@drawable/thinner_border_button"
+        android:textColor="@color/colorAccent"
+        app:backgroundTint="#EBEBEB"
+        android:text="Log In"/>
 
     <Button
         android:id="@+id/register"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
-        android:background="@drawable/button_background"
+        android:background="@drawable/thinner_border_button"
+        android:textColor="@color/colorAccent"
+        app:backgroundTint="#EBEBEB"
         android:text="Register"
-        app:backgroundTint="#279A94 " />
+         />
   
 </LinearLayout> 
   

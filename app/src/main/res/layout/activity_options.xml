@@ -26,9 +26,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="8dp"
-        android:background="#279A94 "
         android:text="Log Out"
-        android:textColor="@color/white"
+        android:textStyle="bold"
         android:textSize="18sp" />
 
     <View

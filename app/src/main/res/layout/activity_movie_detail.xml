@@ -69,11 +69,13 @@
         android:layout_marginTop="32dp"
         android:text="Visit Website"
         android:textStyle="bold|italic"
-        app:backgroundTint="#279A94"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.433"
         app:layout_constraintStart_toEndOf="@+id/ivMoviePicture"
-        app:layout_constraintTop_toBottomOf="@+id/tvRating" />
+        app:layout_constraintTop_toBottomOf="@+id/tvRating"
+        android:background="@drawable/thinner_border_button"
+        android:textColor="@color/colorAccent"
+        app:backgroundTint="#EBEBEB "/>
 
     <ImageView
         android:id="@+id/ivMoviePicture"
