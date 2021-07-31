@@ -1,188 +1,179 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Fragment.NotificationFragment">
+    tools:context=".FAQActivity">
 
-    <!-- TODO: Update blank fragment layout -->
-
-
-    <ScrollView
-        android:id="@+id/Landing"
+    <GridLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:alignmentMode="alignMargins"
+        android:columnCount="1"
+        android:columnOrderPreserved="false"
+        android:rowCount="4">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:orientation="vertical">
+        <androidx.cardview.widget.CardView
+            android:layout_width="50dp"
+            android:layout_height="140dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1">
 
-            //Title
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/logolong">
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="150dp"
+            android:layout_height="160dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_margin="12dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="6dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/naidocc">
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/imageView1"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_row="0"
+                android:layout_gravity="left|top"
+                app:srcCompat="@drawable/a8" />
+
+
+            <Button
+                android:id="@+id/go_to_FAQ"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="0"
+                android:layout_column="4"
+                android:layout_gravity="bottom|right"
+                android:text="See more"
+                app:backgroundTint="#279A94 " />
+
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="150dp"
+            android:layout_height="160dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_margin="12dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="6dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/am1">
+
+            </LinearLayout>
 
 
             <ImageView
-                android:layout_width="375dp"
-                android:layout_height="144dp"
-                android:layout_gravity="center"
-                android:background="@drawable/_17390267_640512363575290_5031505878076847952_n__1_">
-
-            </ImageView>
-
-            <RelativeLayout
-                android:layout_width="match_parent"
+                android:id="@+id/imageView2"
+                android:layout_width="150dp"
                 android:layout_height="150dp"
-                android:layout_margin="10dp"
-                android:background="@drawable/naidoc_week_1"
-                android:fadingEdge="horizontal|vertical">
+                android:layout_row="0"
+                android:layout_gravity="left"
+                app:srcCompat="@drawable/a7" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="sans-serif-condensed-medium"
-                    android:padding="10dp"
-                    android:text="FAQ"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-                    android:textColor="@color/white"
-                    android:textSize="30dp" />
 
-                <Button
-                    android:id="@+id/go_to_FAQ"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentRight="true"
-                    android:layout_alignParentBottom="true"
-                    android:background="#00000000"
-                    android:padding="10dp"
-                    android:text="See more"
-                    android:textColor="@color/white" />
+            <Button
+                android:id="@+id/go_to_gallery"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|right"
+                android:text="See more"
+                android:textStyle="bold"
+                app:backgroundTint="#279A94 " />
+        </androidx.cardview.widget.CardView>
 
-            </RelativeLayout>
-            //CARD 1
 
-            <RelativeLayout
+        <androidx.cardview.widget.CardView
+            android:layout_width="150dp"
+            android:layout_height="160dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_margin="12dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="6dp">
+
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="150dp"
-                android:layout_margin="10dp"
-                android:background="@drawable/am1">
+                android:layout_height="match_parent"
+                android:layout_row="0"
+                android:layout_column="3"
+                android:background="@drawable/musicpic">
 
-                <TextView
-                    android:layout_width="114dp"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="sans-serif-condensed-medium"
-                    android:padding="10dp"
-                    android:text="Gallery"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-                    android:textColor="@color/white"
-                    android:textSize="30dp" />
+                <ImageView
+                    android:id="@+id/imageView3"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_gravity="left"
+                    app:srcCompat="@drawable/a10" />
 
-                <Button
-                    android:id="@+id/go_to_gallery"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentRight="true"
-                    android:layout_alignParentBottom="true"
-                    android:background="#00000000"
-                    android:padding="10dp"
-                    android:text="See more"
-                    android:textColor="@color/white" />
+            </LinearLayout>
 
-            </RelativeLayout>
-            //CARD 2
 
-            <RelativeLayout
+            <Button
+                android:id="@+id/go_to_music"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|right"
+                android:text="See more"
+                app:backgroundTint="#279A94 " />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="150dp"
+            android:layout_height="160dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_margin="12dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="6dp">
+
+            <LinearLayout
                 android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/__jimmy_pike_rainbow_serpent_1">
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/imageView4"
+                android:layout_width="150dp"
                 android:layout_height="150dp"
-                android:layout_margin="10dp"
-                android:background="@drawable/select1">
+                android:layout_row="0"
+                android:layout_gravity="left"
+                app:srcCompat="@drawable/a9" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="sans-serif-condensed-medium"
-                    android:padding="10dp"
-                    android:text="Music"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-                    android:textColor="@color/white"
-                    android:textSize="30dp" />
-
-                <Button
-                    android:id="@+id/go_to_music"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentRight="true"
-                    android:layout_alignParentBottom="true"
-                    android:background="#00000000"
-                    android:padding="10dp"
-                    android:text="See more"
-                    android:textColor="@color/white" />
-
-            </RelativeLayout>
-            //CARD 3
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="150dp"
-                android:layout_margin="10dp"
-                android:background="@drawable/aboriginal_dreamtime_8">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="sans-serif-condensed-medium"
-                    android:padding="10dp"
-                    android:text="Movies"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-                    android:textColor="@color/white"
-                    android:textSize="30dp" />
-
-                <Button
-                    android:id="@+id/go_to_movies"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentRight="true"
-                    android:layout_alignParentBottom="true"
-                    android:background="#00000000"
-                    android:padding="10dp"
-                    android:text="See more"
-                    android:textColor="@color/white" />
-
-            </RelativeLayout>
-            //CARD 4
-
-            <!--        <RelativeLayout-->
-            <!--            android:layout_width="match_parent"-->
-            <!--            android:layout_height="150dp"-->
-            <!--            android:layout_margin="10dp"-->
-            <!--            android:background="@drawable/image__1_">-->
-
-            <!--            <TextView-->
-            <!--                android:layout_width="wrap_content"-->
-            <!--                android:layout_height="wrap_content"-->
-            <!--                android:fontFamily="sans-serif-condensed-medium"-->
-            <!--                android:padding="10dp"-->
-            <!--                android:text="NEWS"-->
-            <!--                android:textAppearance="@style/TextAppearance.AppCompat.Body2"-->
-            <!--                android:textColor="@color/black"-->
-            <!--                android:textSize="30dp" />-->
-
-            <!--            <Button-->
-            <!--                android:layout_width="wrap_content"-->
-            <!--                android:layout_height="wrap_content"-->
-            <!--                android:layout_alignParentRight="true"-->
-            <!--                android:layout_alignParentBottom="true"-->
-            <!--                android:background="#00000000"-->
-            <!--                android:padding="10dp"-->
-            <!--                android:text="See more"-->
-            <!--                android:textColor="@color/white" />-->
-
-            <!--        </RelativeLayout>-->
-            <!--        //CARD 5-->
+            <Button
+                android:id="@+id/go_to_movies"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|right"
+                android:text="See more"
+                app:backgroundTint="#279A94 " />
+        </androidx.cardview.widget.CardView>
 
 
-        </LinearLayout>
+    </GridLayout>
 
-
-    </ScrollView>
-
-</FrameLayout>
+</ScrollView>
