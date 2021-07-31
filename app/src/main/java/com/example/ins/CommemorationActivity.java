@@ -15,13 +15,6 @@ public class CommemorationActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_commemoration);
 
-        btn_comm = (ImageView) findViewById(R.id.btn_comm);
-        btn_comm.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent faqPage = new Intent(CommemorationActivity.this, FAQActivity.class);
-                startActivity(faqPage);
-            }
-        });
+
     }
 }

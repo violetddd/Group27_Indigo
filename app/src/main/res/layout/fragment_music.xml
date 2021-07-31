@@ -15,15 +15,6 @@
         tools:context=".MusicActivity">
 
         <ImageView
-            android:layout_width="25dp"
-            android:layout_height="25dp"
-            android:id="@+id/back_btn_music"
-            app:srcCompat="@mipmap/back_btn_whitebg"
-            android:layout_gravity="left"
-            android:layout_marginTop="15dp"
-            android:layout_marginBottom="15dp"/>
-
-        <ImageView
             android:id="@+id/imageView"
             android:layout_width="330dp"
             android:layout_height="330dp"

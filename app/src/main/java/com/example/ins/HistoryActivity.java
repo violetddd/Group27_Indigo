@@ -14,13 +14,6 @@ public class HistoryActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_history);
 
-        btn_histories = (ImageView) findViewById(R.id.btn_histories);
-        btn_histories.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent faqPage = new Intent(HistoryActivity.this, FAQActivity.class);
-                startActivity(faqPage);
-            }
-        });
+
     }
 }

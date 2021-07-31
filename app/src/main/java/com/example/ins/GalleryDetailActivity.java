@@ -52,15 +52,7 @@ public class GalleryDetailActivity extends AppCompatActivity {
         tvdescription.setText(Description);
         img.setImageResource(image);
 
-        btn_gallerydetail = (ImageView) findViewById(R.id.back_btn_g_detail);
-        mSearch.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent openUrlIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(Link));
-                startActivity(openUrlIntent);
 
-            }
-        });
 
 
 //        for (int picture : pictures) {//condition for slideshow
