@@ -5,39 +5,184 @@
     tools:context=".Fragment.NotificationFragment">
 
     <!-- TODO: Update blank fragment layout -->
-   
-    <LinearLayout
+
+
+    <ScrollView
+        android:id="@+id/Landing"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center"
-        android:orientation="vertical"
-        tools:context=".CultureActivity">
+        android:layout_height="match_parent">
 
-        <Button
-            android:id="@+id/go_to_music"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Explore Music"/>
+            android:layout_margin="10dp"
+            android:orientation="vertical">
 
-        <Button
-            android:id="@+id/go_to_FAQ"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Questions and Videos"/>
+            //Title
 
-        <Button
-            android:id="@+id/go_to_gallery"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Explore Galleries"/>
 
-        <Button
-            android:id="@+id/go_to_movies"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Explore Movies"/>
+            <ImageView
+                android:layout_width="375dp"
+                android:layout_height="144dp"
+                android:layout_gravity="center"
+                android:background="@drawable/_17390267_640512363575290_5031505878076847952_n__1_">
 
-    </LinearLayout>
+            </ImageView>
 
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_margin="10dp"
+                android:background="@drawable/naidoc_week_1"
+                android:fadingEdge="horizontal|vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-condensed-medium"
+                    android:padding="10dp"
+                    android:text="FAQ"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                    android:textColor="@color/white"
+                    android:textSize="30dp" />
+
+                <Button
+                    android:id="@+id/go_to_FAQ"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentBottom="true"
+                    android:background="#00000000"
+                    android:padding="10dp"
+                    android:text="See more"
+                    android:textColor="@color/white" />
+
+            </RelativeLayout>
+            //CARD 1
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_margin="10dp"
+                android:background="@drawable/am1">
+
+                <TextView
+                    android:layout_width="114dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-condensed-medium"
+                    android:padding="10dp"
+                    android:text="Gallery"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                    android:textColor="@color/white"
+                    android:textSize="30dp" />
+
+                <Button
+                    android:id="@+id/go_to_gallery"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentBottom="true"
+                    android:background="#00000000"
+                    android:padding="10dp"
+                    android:text="See more"
+                    android:textColor="@color/white" />
+
+            </RelativeLayout>
+            //CARD 2
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_margin="10dp"
+                android:background="@drawable/select1">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-condensed-medium"
+                    android:padding="10dp"
+                    android:text="Music"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                    android:textColor="@color/white"
+                    android:textSize="30dp" />
+
+                <Button
+                    android:id="@+id/go_to_music"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentBottom="true"
+                    android:background="#00000000"
+                    android:padding="10dp"
+                    android:text="See more"
+                    android:textColor="@color/white" />
+
+            </RelativeLayout>
+            //CARD 3
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_margin="10dp"
+                android:background="@drawable/aboriginal_dreamtime_8">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-condensed-medium"
+                    android:padding="10dp"
+                    android:text="Movies"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                    android:textColor="@color/white"
+                    android:textSize="30dp" />
+
+                <Button
+                    android:id="@+id/go_to_movies"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentBottom="true"
+                    android:background="#00000000"
+                    android:padding="10dp"
+                    android:text="See more"
+                    android:textColor="@color/white" />
+
+            </RelativeLayout>
+            //CARD 4
+
+            <!--        <RelativeLayout-->
+            <!--            android:layout_width="match_parent"-->
+            <!--            android:layout_height="150dp"-->
+            <!--            android:layout_margin="10dp"-->
+            <!--            android:background="@drawable/image__1_">-->
+
+            <!--            <TextView-->
+            <!--                android:layout_width="wrap_content"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:fontFamily="sans-serif-condensed-medium"-->
+            <!--                android:padding="10dp"-->
+            <!--                android:text="NEWS"-->
+            <!--                android:textAppearance="@style/TextAppearance.AppCompat.Body2"-->
+            <!--                android:textColor="@color/black"-->
+            <!--                android:textSize="30dp" />-->
+
+            <!--            <Button-->
+            <!--                android:layout_width="wrap_content"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:layout_alignParentRight="true"-->
+            <!--                android:layout_alignParentBottom="true"-->
+            <!--                android:background="#00000000"-->
+            <!--                android:padding="10dp"-->
+            <!--                android:text="See more"-->
+            <!--                android:textColor="@color/white" />-->
+
+            <!--        </RelativeLayout>-->
+            <!--        //CARD 5-->
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
 
 </FrameLayout>
