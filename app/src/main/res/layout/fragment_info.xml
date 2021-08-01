@@ -108,29 +108,31 @@
             android:layout_height="match_parent"
             android:layout_marginTop="20dp"
             android:text="- If you click on ‘Art’, you will be able to explore art galleries and exhibitions near you. "
-            android:textAlignment="viewEnd"
+            android:textAlignment="textStart"
             android:textColor="@color/black" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
             android:text="- The ‘Music’ page allows you to listen to Indigenous songs via the app. "
-            android:textAlignment="viewEnd"
+            android:textAlignment="textStart"
             android:textColor="@color/black" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
             android:text="- The ‘Culture’ page provides short videos to give you an insight of what it means to be Indigenous e.g. Stolen generation stories or meaning behind the Aboriginal flag.
 "
-            android:textAlignment="viewEnd"
+            android:textAlignment="textStart"
             android:textColor="@color/black" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:text="- The ‘Movies’ page recommends some cultural movies that are also endorsed by both Red Cross Australia and UNSW. "
-            android:textAlignment="viewEnd"
+            android:textAlignment="textStart"
             android:textColor="@color/black" />
 
         <TextView
@@ -141,7 +143,7 @@
             android:text="All the details are presented to you in a fun and interactive way. You may go through these at your own pace. "
             />
 
-        
+
 
     </LinearLayout>
     </ScrollView>
