@@ -6,9 +6,143 @@
     tools:context=".Fragment.InfoFragment">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:orientation="vertical"
+        >
 
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:text="Welcome to Indigo!"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="25dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="This social media mobile application, ‘Indigo’, allows you to learn more about the culture of First Nations people in Australia, by contributing via our social media platform or simply exploring a variety of events, arts, music, cultural videos and movies. Our Industry Sponsor is Red Cross Australia, a charity organisation that supports vulnerable communities by providing emergency assistance and community welfare programs.
+"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Our application offers 3 main pages:"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="1. Social Media profile"
+            android:textStyle="bold"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="2.Events page"
+            android:textStyle="bold"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="3.Explore page: Art, Music, Culture and Movies"
+            android:textStyle="bold"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="How can I share my thoughts about Indigenous culture in a meaningful way?"
+            android:textStyle="bold"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="You can create a social media profile and login to the app where you may post pictures to share insights about the rich Indigenous culture. You can also be followed by and follow other users to grow your social network, encouraging greater social interaction and awareness amongst your friends.
+"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="I’m interested in attending some cultural events but I'm not sure what events are available? "
+            android:textStyle="bold"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/black"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="This convenient page lets you search for local and online events within NSW, Australia. You can sort the list of events by date, fee and state using the filter function. Additionally, you can click on the event to get a closer look of the geolocation of each event and register directly via the app. If you wish to see more details about the event before registering, you can easily do that with one click of a button."
+
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Where and how can I learn more about First Nations culture? "
+            android:textStyle="bold"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="If you’re interested in art, music, movies or just want to learn more about the history of Indigenous culture we’ve got you covered. To make your life easier, we have collated a variety of aspects of Indigenous culture into one page. Simply click on which category you are interested in and we will provide you with a vast bank of resources. "
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="20dp"
+            android:text="- If you click on ‘Art’, you will be able to explore art galleries and exhibitions near you. "
+            android:textAlignment="viewEnd"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="- The ‘Music’ page allows you to listen to Indigenous songs via the app. "
+            android:textAlignment="viewEnd"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="- The ‘Culture’ page provides short videos to give you an insight of what it means to be Indigenous e.g. Stolen generation stories or meaning behind the Aboriginal flag.
+"
+            android:textAlignment="viewEnd"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="- The ‘Movies’ page recommends some cultural movies that are also endorsed by both Red Cross Australia and UNSW. "
+            android:textAlignment="viewEnd"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/black"
+            android:text="All the details are presented to you in a fun and interactive way. You may go through these at your own pace. "
+            />
+
+        
+
+    </LinearLayout>
+    </ScrollView>
 </FrameLayout>
