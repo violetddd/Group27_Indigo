@@ -70,7 +70,7 @@
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:src="@drawable/ic_like"
-                android:tint="#279A94 " />
+                 />
 
             <ImageView
                 android:id="@+id/comment"
@@ -79,7 +79,7 @@
                 android:layout_marginStart="10dp"
                 android:layout_toEndOf="@id/like"
                 android:src="@drawable/ic_comment"
-                android:tint="#279A94 " />
+                app:tint="#279A94 " />
 
             <ImageView
                 android:id="@+id/save"
@@ -87,7 +87,7 @@
                 android:layout_height="30dp"
                 android:layout_alignParentEnd="true"
                 android:src="@drawable/ic_save"
-                android:tint="#279A94 " />
+                app:tint="#279A94 " />
         </RelativeLayout>
 
         <TextView

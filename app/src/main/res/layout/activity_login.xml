@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/green_bg"
     android:orientation="vertical"
     android:paddingLeft="30dp"
     android:paddingTop="40dp"
@@ -37,8 +36,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="25dp"
-        android:background="@drawable/edittext_background"
+        android:background="@drawable/thinner_border_button"
         android:hint="Email"
+        android:textColorHint="@color/colorAccent"
         android:inputType="textEmailAddress"
         android:padding="10dp" />
 
@@ -47,8 +47,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
-        android:background="@drawable/edittext_background"
+        android:background="@drawable/thinner_border_button"
         android:hint="Password"
+        android:textColorHint="@color/colorAccent"
         android:inputType="textPassword"
         android:padding="10dp" />
 
@@ -58,8 +59,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
         android:text="Log In"
-        android:background="@drawable/transparent_bg_bordered_button"
-        android:textColor="@color/teal_700"
+        android:background="@drawable/round_anything"
+        android:textColor="#FFFFFF"
         app:backgroundTint="#279A94" />
 
     <TextView
@@ -67,7 +68,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
+        android:textSize="15sp"
+        android:textStyle="italic|bold"
         android:text="Don’t have an account? Sign up"
-        android:textColor="#064942" />
+        android:textColor="@color/colorAccent" />
 
 </LinearLayout> 

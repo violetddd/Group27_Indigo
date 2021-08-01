@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/green_bg"
     android:orientation="vertical"
     android:padding="30dp"
     tools:context=".RegisterActivity">
@@ -33,8 +32,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
-        android:background="@drawable/edittext_background"
+        android:background="@drawable/thinner_border_button"
         android:hint="Username"
+        android:textColorHint="@color/colorAccent"
         android:padding="10dp" />
 
     <EditText
@@ -42,8 +42,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
-        android:background="@drawable/edittext_background"
+        android:background="@drawable/thinner_border_button"
         android:hint="Full Name"
+        android:textColorHint="@color/colorAccent"
         android:padding="10dp" />
 
     <EditText
@@ -51,9 +52,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
-        android:background="@drawable/edittext_background"
+        android:background="@drawable/thinner_border_button"
         android:hint="Email"
         android:inputType="textEmailAddress"
+        android:textColorHint="@color/colorAccent"
         android:padding="10dp" />
 
     <EditText
@@ -61,8 +63,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
-        android:background="@drawable/edittext_background"
+        android:background="@drawable/thinner_border_button"
         android:hint="Password"
+        android:textColorHint="@color/colorAccent"
         android:inputType="textPassword"
         android:padding="10dp" />
 
@@ -72,8 +75,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
         android:text="Register"
-        android:background="@drawable/transparent_bg_bordered_button"
-        android:textColor="@color/teal_700"
+        android:background="@drawable/round_anything"
+        android:textColor="#FFFFFF"
         app:backgroundTint="#279A94" />
 
     <TextView
@@ -82,7 +85,9 @@
         android:layout_height="24dp"
         android:layout_marginTop="10dp"
         android:text="Already have an account? Log In"
-        android:textColor="#064942" />
+        android:textColor="@color/colorAccent"
+        android:textSize="15sp"
+        android:textStyle="bold|italic"/>
 
     <TextView
         android:id="@+id/text_hint"
