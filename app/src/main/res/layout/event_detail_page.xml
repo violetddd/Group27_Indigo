@@ -20,11 +20,12 @@
 
     <ImageView
         android:id="@+id/button3"
-        android:layout_width="385dp"
+        android:layout_width="365dp"
         android:layout_height="260dp"
-        android:layout_marginStart="12dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
         android:layout_marginBottom="8dp"
-        android:background="@drawable/round_anything"
+        android:background="@drawable/progress_drawable"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -144,9 +145,11 @@
         android:layout_height="33dp"
         android:layout_marginEnd="30dp"
         android:layout_marginBottom="220dp"
-        android:background="@drawable/round_button"
         android:text="View Detail"
-        android:textColor="#FFFFFF"
+        android:background="@drawable/thinner_border_button"
+        android:textColor="@color/colorAccent"
+        android:textSize="11sp"
+        app:backgroundTint="#EBEBEB "
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
