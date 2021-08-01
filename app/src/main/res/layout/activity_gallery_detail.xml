@@ -8,14 +8,6 @@
     android:orientation="vertical"
     >
 
-    <ImageView
-        android:layout_width="25dp"
-        android:layout_height="25dp"
-        android:id="@+id/back_btn_g_detail"
-        app:srcCompat="@mipmap/back_btn_whitebg"
-        android:layout_gravity="left"
-        android:layout_marginTop="15dp"/>
-
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
