@@ -251,13 +251,13 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.ImageViewHolde
                                                 @Override
                                                 public void onComplete(@NonNull @NotNull Task<Void> task) {
                                                     if(task.isSuccessful()){
-                                                        Toast.makeText(mContext,"Deleted",Toast.LENGTH_SHORT).show();
+                                                        Toast.makeText(mContext,"Post deleted",Toast.LENGTH_SHORT).show();
                                                     }
                                                 }
                                             });
                                     return true;
                                 case R.id.report:
-                                    Toast.makeText(mContext,"Report clicked",Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(mContext,"Post reported!",Toast.LENGTH_SHORT).show();
                                     return true;
                                 default:
                                     return false;

@@ -108,8 +108,8 @@ public class EditProfileActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 updateProfile(fullname.getText().toString(),username.getText().toString(),bio.getText().toString());
-                Intent i = new Intent(EditProfileActivity.this, ProfileFragment.class);
-                startActivity(i);
+                //Intent i = new Intent(EditProfileActivity.this, ProfileFragment.class);
+                //startActivity(i);
 
             }
         });

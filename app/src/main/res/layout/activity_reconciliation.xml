@@ -7,6 +7,12 @@
     android:orientation="vertical"
     tools:context=".ReconciliationActivity">
 
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/toolbar"
+        android:background="?android:attr/windowBackground"/>
+
 
 
     <androidx.core.widget.NestedScrollView
