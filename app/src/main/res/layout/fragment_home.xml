@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".Fragment.HomeFragment">
 
     <com.google.android.material.appbar.AppBarLayout
@@ -36,7 +37,8 @@
                     android:layout_marginTop="10dp"
                     android:layout_marginEnd="9dp"
                     android:layout_marginRight="10dp"
-                    android:src="@drawable/ic_events" />
+                    android:src="@drawable/ic_events"
+                    app:tint="@color/teal_700"/>
 
 
                 <ImageView
@@ -45,7 +47,8 @@
                     android:layout_marginTop="10dp"
                     android:layout_marginLeft="310dp"
                     android:src="@drawable/ic_faq"
-                    android:id="@+id/FAQ"/>
+                    android:id="@+id/FAQ"
+                    app:tint="@color/teal_700"/>
 
 
 

@@ -79,6 +79,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Go to website"
+                android:textColor="@color/teal_700"
+                android:background="@drawable/thinner_border_button"
                 app:backgroundTint="#279A94 " />
 
 

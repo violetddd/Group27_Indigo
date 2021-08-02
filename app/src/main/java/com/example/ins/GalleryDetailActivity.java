@@ -53,6 +53,15 @@ public class GalleryDetailActivity extends AppCompatActivity {
         img.setImageResource(image);
 
 
+        mSearch.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Intent.ACTION_VIEW,Uri.parse(Link));
+                startActivity(intent);
+            }
+        });
+
+
 
 
 //        for (int picture : pictures) {//condition for slideshow
