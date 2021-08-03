@@ -7,9 +7,17 @@
     tools:context=".Fragment.InfoFragment">
 
     <!-- TODO: Update blank fragment layout -->
+
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="wrap_content"
+        android:layout_height="304dp"
+        android:src="@drawable/info_bg_green" />
+
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        tools:visibility="visible">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -21,16 +29,19 @@
 
             <TextView
                 android:layout_width="match_parent"
-                android:layout_height="32dp"
+                android:layout_height="86dp"
+                android:paddingTop="40dp"
                 android:text="Welcome to Indigo!"
                 android:textAlignment="center"
-                android:textColor="@color/black"
-                android:textSize="25dp"
+                android:textColor="@color/teal_700"
+                android:textSize="30sp"
                 android:textStyle="bold" />
 
             <TextView
-                android:layout_width="match_parent"
+                android:layout_width="391dp"
                 android:layout_height="match_parent"
+                android:paddingLeft="18dp"
+                android:paddingTop="20dp"
                 android:text="This social media mobile application, ‘Indigo’, allows you to learn more about the culture of First Nations people in Australia, by contributing via our social media platform or simply exploring a variety of events, arts, music, cultural videos and movies. Our Industry Sponsor is Red Cross Australia, a charity organisation that supports vulnerable communities by providing emergency assistance and community welfare programs.
 "
                 android:textColor="@color/black" />
@@ -46,21 +57,21 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:text="1. Social Media profile"
-                android:textColor="@color/black"
+                android:textColor="@color/teal_700"
                 android:textStyle="bold" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:text="2.Events page"
-                android:textColor="@color/black"
+                android:textColor="@color/teal_700"
                 android:textStyle="bold" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:text="3.Explore page: Art, Music, Culture and Movies"
-                android:textColor="@color/black"
+                android:textColor="@color/teal_700"
                 android:textStyle="bold" />
 
             <TextView
@@ -155,4 +166,5 @@
 
         </LinearLayout>
     </ScrollView>
+
 </FrameLayout>
