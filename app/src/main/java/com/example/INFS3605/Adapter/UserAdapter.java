@@ -32,14 +32,14 @@ import de.hdodenhof.circleimageview.CircleImageView;
 
 public class UserAdapter extends RecyclerView.Adapter<UserAdapter.ViewHolder>{
 
-    private Context mContext;
+    private Context myContext;
     private List<User> mUsers;
     private boolean isfragment;
 
     private FirebaseUser firebaseUser;
 
-    public UserAdapter(Context mContext, List<User> mUsers, boolean isfragment) {
-        this.mContext = mContext;
+    public UserAdapter(Context MYContext, List<User> mUsers, boolean isfragment) {
+        this.myContext = MYContext;
         this.mUsers = mUsers;
         this.isfragment=isfragment;
     }
@@ -48,7 +48,7 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.ViewHolder>{
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
-        View view = LayoutInflater.from(mContext).inflate(R.layout.user_item, viewGroup, false);
+        View view = LayoutInflater.from(myContext).inflate(R.layout.user_item, viewGroup, false);
         return new UserAdapter.ViewHolder(view);
     }
 
@@ -62,7 +62,7 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.ViewHolder>{
         viewHolder.username.setText(user.getUsername());
         viewHolder.fullname.setText(user.getFullname());
 
-        Glide.with(mContext).load(user.getImageurl()).into(viewHolder.image_profile);
+        Glide.with(myContext).load(user.getImageurl()).into(viewHolder.image_profile);
         isFollowing(user.getId(), viewHolder.btn_follow);
 
         if(user.getId().equals(firebaseUser.getUid())){
@@ -73,17 +73,17 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.ViewHolder>{
             @Override
             public void onClick(View view) {
                 if (isfragment) {
-                    SharedPreferences.Editor editor = mContext.getSharedPreferences("PREFS", Context.MODE_PRIVATE).edit();
+                    SharedPreferences.Editor editor = myContext.getSharedPreferences("PREFS", Context.MODE_PRIVATE).edit();
                     editor.putString("profileid", user.getId());
                     editor.apply();
 
-                    ((FragmentActivity) mContext).getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                    ((FragmentActivity) myContext).getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
                             new ProfileFragment()).commit();
 
                 } else{
-                    Intent intent = new Intent(mContext, MainActivity.class);
+                    Intent intent = new Intent(myContext, MainActivity.class);
                     intent.putExtra("publisherid",user.getId());
-                    mContext.startActivity(intent);
+                    myContext.startActivity(intent);
                 }
             }
         });

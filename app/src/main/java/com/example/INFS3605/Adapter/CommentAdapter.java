@@ -35,21 +35,21 @@ import java.util.List;
 
 public class CommentAdapter extends RecyclerView.Adapter<CommentAdapter.ViewHolder> {
 
-    private Context mContext;
-    private List<Comment> mComment;
+    private Context myContext;
+    private List<Comment> myComment;
     private String postid;
     private FirebaseUser firebaseUser;
 
-    public CommentAdapter(Context mContext, List<Comment> mComment, String postid) {
-        this.mContext = mContext;
-        this.mComment = mComment;
+    public CommentAdapter(Context MYContext, List<Comment> mComment, String postid) {
+        this.myContext = MYContext;
+        this.myComment = mComment;
         this.postid = postid;
     }
 
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(mContext).inflate(R.layout.comment_item, parent, false);
+        View view = LayoutInflater.from(myContext).inflate(R.layout.comment_item, parent, false);
         return new CommentAdapter.ViewHolder(view);
     }
 
@@ -57,17 +57,16 @@ public class CommentAdapter extends RecyclerView.Adapter<CommentAdapter.ViewHold
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
 
         firebaseUser = FirebaseAuth.getInstance().getCurrentUser();
-        final Comment comment = mComment.get(position);
+        final Comment comment = myComment.get(position);
         holder.comment.setText(comment.getComment());
-        //System.out.println("Message: "+comment.getComment());
         getUserInfo(holder.image_profile, holder.username, comment.getPublisher());
 
         holder.comment.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(mContext, MainActivity.class);
+                Intent intent = new Intent(myContext, MainActivity.class);
                 intent.putExtra("publisherid", comment.getPublisher());
-                mContext.startActivity(intent);
+                myContext.startActivity(intent);
             }
         });
 
@@ -75,9 +74,9 @@ public class CommentAdapter extends RecyclerView.Adapter<CommentAdapter.ViewHold
         holder.image_profile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(mContext, MainActivity.class);
+                Intent intent = new Intent(myContext, MainActivity.class);
                 intent.putExtra("publisherid", comment.getPublisher());
-                mContext.startActivity(intent);
+                myContext.startActivity(intent);
             }
         });
 
@@ -85,7 +84,7 @@ public class CommentAdapter extends RecyclerView.Adapter<CommentAdapter.ViewHold
             @Override
             public boolean onLongClick(View view) {
                 if (comment.getPublisher().equals(firebaseUser.getUid())) {
-                    AlertDialog alertDialog = new AlertDialog.Builder(mContext).create();
+                    AlertDialog alertDialog = new AlertDialog.Builder(myContext).create();
                     alertDialog.setTitle("Do you want to delete?");
                     alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, "No",
                             new DialogInterface.OnClickListener() {
@@ -103,7 +102,7 @@ public class CommentAdapter extends RecyclerView.Adapter<CommentAdapter.ViewHold
                                                 @Override
                                                 public void onComplete(@NonNull @NotNull Task<Void> task) {
                                                     if (task.isSuccessful()) {
-                                                        Toast.makeText(mContext, "Deleted!", Toast.LENGTH_SHORT).show();
+                                                        Toast.makeText(myContext, "Deleted!", Toast.LENGTH_SHORT).show();
                                                     }
                                                 }
                                             });
@@ -120,7 +119,7 @@ public class CommentAdapter extends RecyclerView.Adapter<CommentAdapter.ViewHold
 
     @Override
     public int getItemCount() {
-        return mComment.size();
+        return myComment.size();
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
@@ -145,7 +144,7 @@ public class CommentAdapter extends RecyclerView.Adapter<CommentAdapter.ViewHold
             @Override
             public void onDataChange(DataSnapshot snapshot) {
                 User user = snapshot.getValue(User.class);
-                Glide.with(mContext).load(user.getImageurl()).into(imageView);
+                Glide.with(myContext).load(user.getImageurl()).into(imageView);
                 username.setText(user.getUsername());
             }
 

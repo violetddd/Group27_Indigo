@@ -82,7 +82,7 @@ public class FollowerActivity extends AppCompatActivity {
 
 
     private void getLikes() {
-        DatabaseReference reference = FirebaseDatabase.getInstance().getReference("Likes").child(id);
+        DatabaseReference reference = FirebaseDatabase.getInstance().getReference("likes").child(id);
         reference.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull @NotNull DataSnapshot snapshot) {
@@ -90,6 +90,7 @@ public class FollowerActivity extends AppCompatActivity {
                 for (DataSnapshot dataSnapshot : snapshot.getChildren()){
                     idList.add(dataSnapshot.getKey());
                 }
+                showUsers();
             }
 
             @Override

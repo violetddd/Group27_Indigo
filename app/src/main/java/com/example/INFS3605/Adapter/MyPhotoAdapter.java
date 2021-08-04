@@ -20,12 +20,12 @@ import org.jetbrains.annotations.NotNull;
 
 import java.util.List;
 
-public class MyFotoAdapter extends RecyclerView.Adapter<MyFotoAdapter.ImageViewHolder>{
+public class MyPhotoAdapter extends RecyclerView.Adapter<MyPhotoAdapter.ImageViewHolder>{
 
     private Context mContext;
     private List<Post>mPosts;
 
-    public MyFotoAdapter(Context context, List<Post> posts) {
+    public MyPhotoAdapter(Context context, List<Post> posts) {
         mContext = context;
         mPosts = posts;
     }
@@ -34,7 +34,7 @@ public class MyFotoAdapter extends RecyclerView.Adapter<MyFotoAdapter.ImageViewH
     @Override
     public ImageViewHolder onCreateViewHolder(@NonNull @NotNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(mContext).inflate(R.layout.fotos_item, parent,false);
-        return new MyFotoAdapter.ImageViewHolder(view);
+        return new MyPhotoAdapter.ImageViewHolder(view);
     }
 
     @Override

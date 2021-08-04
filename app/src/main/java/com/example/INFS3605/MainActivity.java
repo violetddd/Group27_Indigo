@@ -10,9 +10,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
 import com.example.INFS3605.Fragment.HomeFragment;
-import com.example.INFS3605.Fragment.NotificationFragment;
+import com.example.INFS3605.Fragment.ExploreFragment;
 import com.example.INFS3605.Fragment.ProfileFragment;
-import com.example.INFS3605.Fragment.SearchFragment;
+import com.example.INFS3605.Fragment.FollowFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.auth.FirebaseAuth;
 
@@ -57,14 +57,14 @@ public class MainActivity extends AppCompatActivity {
                                 selectedFragment = new HomeFragment();
                                 break;
                             case R.id.nav_search:
-                                selectedFragment = new SearchFragment();
+                                selectedFragment = new FollowFragment();
                                 break;
                             case R.id.nav_add:
                                 selectedFragment = null;
                                 startActivity(new Intent(MainActivity.this,PostActivity.class));
                                 break;
                             case R.id.nav_heart:
-                                selectedFragment = new NotificationFragment();
+                                selectedFragment = new ExploreFragment();
                                 break;
                             case R.id.nav_profile:
                                 SharedPreferences.Editor editor = getSharedPreferences("PREFS", MODE_PRIVATE).edit();

@@ -3,12 +3,12 @@ package com.example.INFS3605.Model;
 public class Comment {
 
     private String commentid;
-    private String comment;
+    private String comments;
     private String publisher;
 
-    public Comment(String commentid, String comment, String publisher){
+    public Comment(String commentid, String comments, String publisher){
         this.commentid=commentid;
-        this.comment = comment;
+        this.comments = comments;
         this.publisher=publisher;
     }
 
@@ -24,11 +24,11 @@ public class Comment {
     }
 
     public String getComment() {
-        return comment;
+        return comments;
     }
 
     public void setComment(String comment) {
-        this.comment = comment;
+        this.comments = comment;
     }
 
     public String getPublisher() {

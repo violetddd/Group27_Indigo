@@ -26,11 +26,11 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.ArrayList;
 import java.util.List;
 
-public class SearchFragment extends Fragment {
+public class FollowFragment extends Fragment {
 
     private RecyclerView recyclerView;
-    private UserAdapter userAdapter;
-    private List<User> mUsers;
+    private UserAdapter myuserAdapter;
+    private List<User> myUsers;
 
     EditText search_bar;
 
@@ -46,9 +46,9 @@ public class SearchFragment extends Fragment {
 
         search_bar = view.findViewById(R.id.search_bar);
 
-        mUsers = new ArrayList<>();
-        userAdapter = new UserAdapter(getContext(), mUsers,true);
-        recyclerView.setAdapter(userAdapter);
+        myUsers = new ArrayList<>();
+        myuserAdapter = new UserAdapter(getContext(), myUsers,true);
+        recyclerView.setAdapter(myuserAdapter);
 
         readUsers();
         search_bar.addTextChangedListener(new TextWatcher() {
@@ -80,13 +80,13 @@ public class SearchFragment extends Fragment {
         query.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
-                mUsers.clear();
+                myUsers.clear();
                 for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
                     User user = snapshot.getValue(User.class);
-                    mUsers.add(user);
+                    myUsers.add(user);
                 }
 
-                userAdapter.notifyDataSetChanged();
+                myuserAdapter.notifyDataSetChanged();
             }
 
             @Override
@@ -103,13 +103,13 @@ public class SearchFragment extends Fragment {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 if (search_bar.getText().toString().equals("")) {
-                    mUsers.clear();
+                    myUsers.clear();
                     for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
                         User user = snapshot.getValue(User.class);
-                        mUsers.add(user);
+                        myUsers.add(user);
                     }
 
-                    userAdapter.notifyDataSetChanged();
+                    myuserAdapter.notifyDataSetChanged();
                 }
 
             }

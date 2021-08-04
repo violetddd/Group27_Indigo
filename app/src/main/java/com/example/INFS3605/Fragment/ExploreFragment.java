@@ -14,11 +14,11 @@ import android.widget.Button;
 import com.example.INFS3605.R;
 
 
-public class NotificationFragment extends Fragment {
+public class ExploreFragment extends Fragment {
 
     Button faqPage_btn, musicPage_btn, moviePage_btn,galleryPage_btn;
 
-    public NotificationFragment() {
+    public ExploreFragment() {
 
     }
 
