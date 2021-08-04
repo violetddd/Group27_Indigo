@@ -19,20 +19,12 @@ import com.google.firebase.auth.FirebaseAuth;
 public class MainActivity extends AppCompatActivity {
     BottomNavigationView bottomNavigationView;
     Fragment selectedFragment = null;
-    //ImageView events;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
             setContentView(R.layout.activity_main);
-            //events = findViewById(R.id.events);
 
-            /*events.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    selectedFragment = new EventsFragment();
-                }
-            });*/
 
             bottomNavigationView = findViewById(R.id.bottom_navigation);
             bottomNavigationView.setOnNavigationItemSelectedListener(navigationItemSelectedListener);

@@ -25,7 +25,7 @@ public class Movies {
     private String movieLink;
     private int moviePicture;
 
-    //Initialising getters and setters for the arraylist
+
     public int getMoviePicture() { return moviePicture; }
 
     public void setMoviePicture(int moviePicture) {
@@ -88,7 +88,7 @@ public class Movies {
         this.id = id;
     }
 
-    public static ArrayList<Movies> getMovies() { //arraylist of hard coded movie entries
+    public static ArrayList<Movies> getMovies() {
         ArrayList<Movies> movies = new ArrayList<>();
         movies.add(new Movies("We Don't Need A Map", "2017/06/07", "Documentary", "  The Southern Cross is the most famous constellation in the southern hemisphere. Ever since colonisation, it’s been claimed, appropriated and hotly-contested for ownership by a range of Australian groups. But for Aboriginal people the meaning of this heavenly body is deeply spiritual. And just about completely unknown. For a start, the Southern Cross isn’t even a cross – it’s a totem that’s deeply woven into the spiritual and practical lives of Aboriginal people.\n" +
                 "\n" +
@@ -114,7 +114,7 @@ public class Movies {
     }
 
 
-    public static Movies getMovie(String id) { //gets the movie
+    public static Movies getMovie(String id) {
         ArrayList<Movies> movies = Movies.getMovies();
         for (final Movies movie : movies) {
             if (movie.getId().equals(id)) {
@@ -123,14 +123,6 @@ public class Movies {
         }
         return null;
     }
-    public static Movies getMovieLink(String id) { //gets the movieLink so I can redirect the user to the right IMDB page
-        ArrayList<Movies> movieLinks = Movies.getMovies();
-        for (final Movies movieLink : movieLinks) {
-            if (movieLink.getId().equals(id)) {
-                return movieLink;
-            }
-        }
-        return null;
-    }
+
 }
 

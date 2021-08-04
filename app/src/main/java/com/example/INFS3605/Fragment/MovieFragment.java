@@ -27,7 +27,6 @@ public class MovieFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_movie, container, false);
         setHasOptionsMenu(true);
 
@@ -52,45 +51,4 @@ public class MovieFragment extends Fragment {
         startActivity(intent);
     }
 
-    /*@Override
-    public boolean onCreateOptionsMenu(Menu menu){ //instantiating menu_main
-        MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.menu_movies, menu);
-        SearchView searchView = (SearchView) menu.findItem(R.id.app_bar_search).getActionView();
-        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
-            @Override
-            public boolean onQueryTextSubmit(String query) {//pass search text
-                mAdapter.getFilter().filter(query);
-                return false;
-            }
-
-            @Override
-            public boolean onQueryTextChange(String newText) { //pass the search query
-                mAdapter.getFilter().filter(newText);
-                return false;
-            }
-        });
-        return true;*/
-    //}
-    /*@Override
-    public boolean onOptionsItemSelected(@NonNull MenuItem item){ //two cases for whether user chooses to sort by release date or rating
-        switch(item.getItemId()){
-            case R.id.sortRating:
-                mAdapter.sort("SORT_RATING");
-                return true;
-
-            case R.id.sortRelease:
-                mAdapter.sort("SORT_RELEASE");
-                return true;
-
-            default:
-                return super.onOptionsItemSelected(item);
-        }
-
-
-
-
-
-
-    }*/
 }

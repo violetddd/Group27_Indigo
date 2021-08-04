@@ -53,22 +53,7 @@ public class RegisterActivity extends AppCompatActivity {
                 startActivity( new Intent(RegisterActivity.this, LoginActivity.class));
             }
         });
-     /*   register.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                pd = new ProgressDialog(RegisterActivity.this);
-                pd.setMessage("Plz ");
-                pd.show();
-                String str_username = username.getText().toString();
-                String str_fullname = fullname.getText().toString();
-                String str_email = email.getText().toString();
-                String str_password= password.getText().toString();
 
-                if(username.getText().toString().isEmpty()||fullname.getText().toString().isEmpty()||email.getText().toString().isEmpty()||password.getText().toString().isEmpty()){
-                    Toast.makeText(RegisterActivity.this,"ALL",Toast.LENGTH_SHORT).show();
-                }
-            }
-        });*/
        register.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v)  {
@@ -83,16 +68,14 @@ public class RegisterActivity extends AppCompatActivity {
 
            if (username.getText().toString().isEmpty()||TextUtils.isEmpty(str_fullname)||TextUtils.isEmpty(str_email)||TextUtils.isEmpty(str_password)){
               Toast.makeText (RegisterActivity.this, "All fields are required!", Toast.LENGTH_SHORT).show();
-               //txt_hint.setText("All fileds are required!");
+
                pd.dismiss();
            } else if (str_password.length() <6) {
                Toast.makeText(RegisterActivity.this, "Password must have 6 characters", Toast.LENGTH_SHORT).show();
-               //register.setText("HI");
-               //txt_hint.setText("Password must have 6 characters");
+
                pd.dismiss();
            } else {
                register(str_username, str_fullname, str_email, str_password);
-              //txt_hint.setText(str_username+","+str_fullname+","+str_email+","+str_password);
                }
 
        }
@@ -108,7 +91,6 @@ public class RegisterActivity extends AppCompatActivity {
                             FirebaseUser firebaseUser = auth.getCurrentUser();
                             String userid = firebaseUser.getUid();
 
-                            //if_success.setText("successful");
 
                             reference = FirebaseDatabase.getInstance().getReference().child("Users").child(userid);
 
@@ -118,15 +100,13 @@ public class RegisterActivity extends AppCompatActivity {
                             hashMap.put("fullname", fullname);
                             hashMap.put("bio", "");
                             hashMap.put("imageurl", "https://firebasestorage.googleapis.com/v0/b/insta-60161.appspot.com/o/indigenous-removebg-preview.png?alt=media&token=25f31538-7c4a-4452-bdcc-5aac3fe01ea3");
-                            // go to firebase----> storage ----> get started-----> got it----->upload file----->select a picture as placeholder-----> file location------> copy imageurl
+
 
                             reference. setValue(hashMap). addOnCompleteListener(new OnCompleteListener<Void>()  {
                                 @Override
                                 public void onComplete(@NonNull Task<Void> task) {
                                     if (task.isSuccessful()){
-                                        //pd.dismiss();
-
-                                        Intent intent = new Intent(RegisterActivity.this, MainActivity.class);//change back to main activity
+                                        Intent intent = new Intent(RegisterActivity.this, MainActivity.class);
                                         intent. addFlags (Intent. FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
                                         startActivity(intent);
                                     }
@@ -135,7 +115,6 @@ public class RegisterActivity extends AppCompatActivity {
                         } else {
                             pd.dismiss();
                             Toast.makeText(RegisterActivity.this, "You can't register with this email or password", Toast.LENGTH_SHORT).show();
-                            //if_success.setText("You can't register with this email or password");
                         }
                     }
                 } );

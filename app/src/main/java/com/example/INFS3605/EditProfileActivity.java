@@ -95,7 +95,6 @@ public class EditProfileActivity extends AppCompatActivity {
         tv_change.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //CropImage.activity().setAspectRatio(1,1).setCropShape(CropImageView.CropShape.OVAL).start(EditProfileActivity.this);
                 CropImage.activity().setCropShape(Build.VERSION.SDK_INT>=Build.VERSION_CODES.P?CropImageView.CropShape.RECTANGLE:CropImageView.CropShape.OVAL).start(EditProfileActivity.this);
             }
         });
@@ -104,8 +103,7 @@ public class EditProfileActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 updateProfile(fullname.getText().toString(),username.getText().toString(),bio.getText().toString());
-                //Intent i = new Intent(EditProfileActivity.this, ProfileFragment.class);
-                //startActivity(i);
+
 
             }
         });
@@ -160,9 +158,7 @@ public class EditProfileActivity extends AppCompatActivity {
 
                         reference.updateChildren(map1);
                         pd.dismiss();
-                        //FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
-                        //ft.replace(R.id.fragment_container, new ProfileFragment());
-                        //ft.commit();
+
 
                     } else {
                         Toast.makeText(EditProfileActivity.this,"Failed",Toast.LENGTH_SHORT).show();

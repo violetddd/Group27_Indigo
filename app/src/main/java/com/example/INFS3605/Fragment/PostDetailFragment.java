@@ -38,7 +38,6 @@ public class PostDetailFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
         View view =  inflater.inflate(R.layout.fragment_post_detail, container, false);
 
         SharedPreferences preferences = getContext().getSharedPreferences("PREFS", Context.MODE_PRIVATE);
@@ -61,7 +60,6 @@ public class PostDetailFragment extends Fragment {
     private void readPost() {
         DatabaseReference reference = FirebaseDatabase.getInstance().getReference("Posts").child(postid);
 
-        //used to be addValueEventlitener
         reference.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull @NotNull DataSnapshot snapshot) {

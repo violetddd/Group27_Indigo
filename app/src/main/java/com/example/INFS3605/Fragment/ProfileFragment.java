@@ -86,8 +86,6 @@ public class ProfileFragment extends Fragment {
 
         StaggeredGridLayoutManager layoutManager = new StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL);
         recyclerView.setLayoutManager(layoutManager);
-        //LinearLayoutManager linearLayoutManager = new GridLayoutManager(getContext(),3);
-       // recyclerView.setLayoutManager(linearLayoutManager);
         postList= new ArrayList<>();
         myFotoAdapter = new MyFotoAdapter(getContext(),postList);
         recyclerView.setAdapter(myFotoAdapter);
@@ -99,8 +97,6 @@ public class ProfileFragment extends Fragment {
 
         StaggeredGridLayoutManager layoutManager_saves = new StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL);
         recyclerView_saves.setLayoutManager(layoutManager_saves);
-       // LinearLayoutManager linearLayoutManager_saves = new GridLayoutManager(getContext(),3);
-        //recyclerView_saves.setLayoutManager(linearLayoutManager_saves);
         postList_saves= new ArrayList<>();
         myFotoAdapter_saves = new MyFotoAdapter(getContext(),postList_saves);
         recyclerView_saves.setAdapter(myFotoAdapter_saves);

@@ -65,17 +65,6 @@ public class FAQFragment extends Fragment {
             }
         });
 
-        //  btn_back_faq = (ImageView) findViewById(R.id.back_btn_faq);
-        //   btn_back_faq.setOnClickListener(new View.OnClickListener() {
-        //     @Override
-        //      public void onClick(View v) {
-        //          Intent cultureFaq = new Intent(FAQActivity.this, NotificationFragment.class);
-        //          startActivity(cultureFaq);
-        //     }
-        //  });
-
-
-
         return view;
     }
 }

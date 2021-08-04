@@ -60,10 +60,10 @@ public class MovieDetailActivity extends AppCompatActivity {
         Rating=  findViewById(R.id.Rating);
 
         Intent intent = getIntent();
-        String id = intent.getStringExtra(INTENT_MESSAGE); //retrieves the movie that the user clicked on in movie_list_row
+        String id = intent.getStringExtra(INTENT_MESSAGE);
 
         Movies movie = Movies.getMovie(id);
-        if (movie != null) { //gets the movie that the user clicks on, doesn't happen unless user clicks.
+        if (movie != null) {
             setTitle(movie.getMovie());
 
             Movie.setText(movie.getMovie());
@@ -85,9 +85,9 @@ public class MovieDetailActivity extends AppCompatActivity {
             });
         }
     }
-    private void watchMovies(String movieLink) { //Specially created another field to incorporate IMDB because the name would not be valid to find the page
+    private void watchMovies(String movieLink) {
         Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.imdb.com/title/" + movieLink));
-        startActivity(intent); //Upon pressing "More Information" button, searches IMDB with the movieLink to find the right movie info page
+        startActivity(intent);
     }
 }
 

@@ -31,7 +31,7 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.MoviesViewHo
     }
 
     @Override
-    public Filter getFilter() { //filters movies based on user keyboard input
+    public Filter getFilter() {
         return new Filter() {
             @Override
             protected FilterResults performFiltering(CharSequence constraint) {
@@ -114,18 +114,5 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.MoviesViewHo
             listener.onClick(v, (String) v.getTag());
         }
     }
-    /*public void sort(final String sortMethod){ //sorting through movies by either rating or release date depending on what the user chooses in descending order
 
-        Collections.sort(mMoviesFiltered, new Comparator<Movies>() {
-            @Override
-            public int compare(Movies o1, Movies o2) {
-                if (sortMethod == "SORT_RATING") { //sort by rating
-                    return String.valueOf(o2.getRating()).compareTo(String.valueOf(o1.getRating()));
-                } else { //sort by release date
-                    return o2.getRelease().compareTo(o1.getRelease());
-                }
-            }
-        });
-        notifyDataSetChanged(); //notify changes to adapter
-    }*/
 }

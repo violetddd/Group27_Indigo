@@ -19,16 +19,12 @@ public class NotificationFragment extends Fragment {
     Button faqPage_btn, musicPage_btn, moviePage_btn,galleryPage_btn;
 
     public NotificationFragment() {
-        // Required empty public constructor
+
     }
-
-
-
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
 
        View v = inflater.inflate(R.layout.fragment_notification, container, false);
 
@@ -36,7 +32,6 @@ public class NotificationFragment extends Fragment {
         musicPage_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //startActivity(new Intent(getActivity(), MusicActivity.class));
                 Fragment fragment = new MusicFragment();
                 FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
@@ -63,7 +58,6 @@ public class NotificationFragment extends Fragment {
        galleryPage_btn.setOnClickListener(new View.OnClickListener() {
            @Override
            public void onClick(View v) {
-               //startActivity(new Intent(getActivity(), GalleryActivity.class));
                Fragment fragment = new GalleryFragment();
                FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
@@ -77,7 +71,6 @@ public class NotificationFragment extends Fragment {
        moviePage_btn.setOnClickListener(new View.OnClickListener() {
            @Override
            public void onClick(View v) {
-               //startActivity(new Intent(getActivity(), MovieActivity.class));
                Fragment fragment = new MovieFragment();
                FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();

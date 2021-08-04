@@ -18,7 +18,6 @@ import java.util.List;
 public class RecyclerviewAdapter extends RecyclerView.Adapter<RecyclerviewAdapter.MyViewHolder> {
 
     private Context mContext;
-    private Context nContext;
     private List<Gallery> mData;
 
     public RecyclerviewAdapter(Context mContext, List<Gallery> mData) {
@@ -67,7 +66,7 @@ public class RecyclerviewAdapter extends RecyclerView.Adapter<RecyclerviewAdapte
         TextView tv_gallery_title;
         ImageView img_gallery_thumbnail;
         CardView cardView;
-        //ViewFlipper mSlideshow;
+
 
         public MyViewHolder(View itemView) {
             super(itemView);
@@ -76,23 +75,7 @@ public class RecyclerviewAdapter extends RecyclerView.Adapter<RecyclerviewAdapte
             img_gallery_thumbnail = (ImageView) itemView.findViewById(R.id.gallery_img_id);
             cardView = (CardView) itemView.findViewById(R.id.cardview_id);
 
-
-//            int pictures[] = {R.drawable.am1, R.drawable.am2, R.drawable.am3, R.drawable.b1, R.drawable.b2, R.drawable.bi0lqr, R.drawable.image__1_, R.drawable.bg1};
-//
-//            for (int picture : pictures) {//condition for slideshow
-//                slideImages(picture);
-//            }
         }
-//
-//
-//        private void slideImages(int picture) {
-//            ImageView imageView = new ImageView(mSlideshow.getContext());
-//            imageView.setBackgroundResource(picture);
-//            mSlideshow.addView(imageView);
-//            mSlideshow.setFlipInterval(3000);//changes images every 3 seconds
-//            mSlideshow.setAutoStart(true);//automatically starts the image change countdown
-//            mSlideshow.setInAnimation(mSlideshow.getContext(), android.R.anim.slide_in_left);
-//            mSlideshow.setOutAnimation(mSlideshow.getContext(), android.R.anim.slide_out_right);
-//        }
+
     }
 }

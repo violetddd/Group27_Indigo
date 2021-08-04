@@ -52,7 +52,6 @@ public class MusicFragment extends Fragment {
         mSeekBarVol = view.findViewById(R.id.seekBarVol);
 
 
-        // creating an ArrayList to store our songs
 
         final ArrayList<Integer> songs = new ArrayList<>();
 
@@ -64,13 +63,9 @@ public class MusicFragment extends Fragment {
         songs.add(5,R.raw.tribal_earth_philip_drummy_proud_music_preview);
 
 
-        // intializing mediaplayer
 
         mMediaPlayer = MediaPlayer.create(getContext().getApplicationContext(), songs.get(currentIndex));
 
-
-
-        // seekbar volume
 
         int maxV = mAudioManager.getStreamMaxVolume(AudioManager.STREAM_MUSIC);
         int curV = mAudioManager.getStreamVolume(AudioManager.STREAM_MUSIC);
@@ -96,8 +91,6 @@ public class MusicFragment extends Fragment {
         });
 
 
-        //above seekbar volume
-        //
 
         play.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -167,51 +160,6 @@ public class MusicFragment extends Fragment {
             }
         });
 
-       /*BottomNavigationView.OnNavigationItemSelectedListener navigationItemSelectedListener =
-                new BottomNavigationView.OnNavigationItemSelectedListener() {
-                    @Override
-                    public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
-
-                        switch (menuItem.getItemId()){
-                            case R.id.nav_home:
-                                //getActivity().getSupportFragmentManager().beginTransaction().remove(MusicFragment.this).commitAllowingStateLoss();
-                                System.out.println("working");
-                                mMediaPlayer.pause();
-                                selectedFragment = new HomeFragment();
-                                break;
-                            case R.id.nav_search:
-                                MusicFragment.this.onDestroy();
-                                selectedFragment = new SearchFragment();
-                                break;
-                            case R.id.nav_add:
-                                MusicFragment.this.onDestroy();
-                                selectedFragment = new HomeFragment();
-                                break;
-                            case R.id.nav_heart:
-                                MusicFragment.this.onDestroy();
-                                selectedFragment = new NotificationFragment();
-                                break;
-                            case R.id.nav_profile:
-                                SharedPreferences.Editor editor = getActivity().getSharedPreferences("PREFS", MODE_PRIVATE).edit();
-                                editor.putString("profileid", FirebaseAuth.getInstance().getCurrentUser().getUid());
-                                editor.apply();
-                                selectedFragment = new ProfileFragment();
-                                break;
-                        }
-
-                        if(selectedFragment != null){
-                            getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, selectedFragment).commit();
-                        }
-                        return true;
-                    }
-                };*/
-
-
-
-
-
-
-
         return view;
     }
 
@@ -220,13 +168,6 @@ public class MusicFragment extends Fragment {
         super.onPause();
         mMediaPlayer.pause();
     }
-
-    /*@Override
-    public void onResume(){
-        super.onResume();
-        mMediaPlayer.isPlaying();
-    }*/
-
 
 
     private void songNames() {

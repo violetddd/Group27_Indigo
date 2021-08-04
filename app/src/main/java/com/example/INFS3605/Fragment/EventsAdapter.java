@@ -24,8 +24,7 @@ public class EventsAdapter extends RecyclerView.Adapter<com.example.INFS3605.Fra
     private View v;
     Context context;
 
-    //Takes in Array of Team (Details) and Listener and sets them as mVideo's array list above
-    //public EventsAdapter(List<EventResponse> events,List<EventDetailResponse> eventDetailResponse, Context context) {
+
     public EventsAdapter(List<EventResponse> events, List<EventDetailResponse> eventDetailResponse, Context context) {
         this.context =  context;
         this.mEventDetailResponses=eventDetailResponse;
@@ -52,15 +51,12 @@ public class EventsAdapter extends RecyclerView.Adapter<com.example.INFS3605.Fra
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(com.example.INFS3605.Fragment.EventsAdapter.this.context, com.example.INFS3605.Fragment.EventDetail.class);
-                //intent.putExtra("ID",events.getId());
                 intent.putExtra("Event Website",eventDetailResponse.getEventWebsite());
                 intent.putExtra("ID",events.getId());
-//                    intent.putExtra("TeamName",team.getTeamName());
                 com.example.INFS3605.Fragment.EventsAdapter.this.context.startActivity(intent);
             }
         });
-        /// holder.image.setImageResource(events.getEventImg());
-       // holder.image.setImageResource(Integer.parseInt(events.getEventImg()));
+
 
     }
 
@@ -73,7 +69,6 @@ public class EventsAdapter extends RecyclerView.Adapter<com.example.INFS3605.Fra
         public ImageView image;//Change to VideoView if using video for basketball
         public TextView eventName,eventDate,eventLocation,eventCost;
         public ImageView map;
-        //TeamViewHolder is a Constructor which IDs the values for the view holders row on the list
         public EventsViewHolder(@NonNull View itemView, Context context) {
             super(itemView);
             eventName= itemView.findViewById(R.id.event_name);

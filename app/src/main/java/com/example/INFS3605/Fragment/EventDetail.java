@@ -53,7 +53,6 @@ public class EventDetail extends AppCompatActivity {
         EventDate = findViewById(R.id.EventDate);
         EventLocation = findViewById(R.id.EventLocation);
         EventCost = findViewById(R.id.EventCost);
-       // EventWeb = findViewById(R.id.EventWeb);
         eventOnline = findViewById(R.id.eventOnline);
         bt_web=findViewById(R.id.bt_web);
 
@@ -65,14 +64,12 @@ public class EventDetail extends AppCompatActivity {
                 EventName.setText(eventDetailResponse.getEventName());
                 EventDate.setText(eventDetailResponse.getDate());
                 EventCost.setText(eventDetailResponse.getCostOfEntry());
-               // EventWeb.setText(eventDetailResponse.getEventWebsite());
 
                 if(eventDetailResponse.getLongitude()==0){
                    webview.setVisibility(View.GONE);
                     eventOnline.setVisibility(View.VISIBLE);
             }else{
                     EventLocation.setText(eventDetailResponse.getLocation());
-                    //        webview.loadUrl("https://www.google.com/maps/@-33.9231399,151.2219017,15z");
                     webview.loadUrl("https://www.google.com/maps/@"+eventDetailResponse.getLatitude()+","+eventDetailResponse.getLongitude()+",18z");
                 }
             }

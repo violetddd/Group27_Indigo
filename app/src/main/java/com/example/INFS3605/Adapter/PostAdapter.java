@@ -52,7 +52,7 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.ImageViewHolde
         public List<Post> mPosts;
 
         private FirebaseUser firebaseUser;
-        //private StorageReference ref;
+
 
         public PostAdapter(Context mContext, List<Post> posts){
             this.mContext = mContext;
@@ -71,18 +71,7 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.ImageViewHolde
 
             firebaseUser = FirebaseAuth.getInstance().getCurrentUser();
             final Post post = mPosts.get(i);
-            //String url = post.getPostimage();
 
-
-            //FirebaseStorage storage = FirebaseStorage.getInstance();
-            //StorageReference storageReference = storage.getReferenceFromUrl(url);
-            //StorageReference ref= FirebaseStorage.getInstance().getReference();
-
-
-
-// working code!
-           /* GlideApp.with(mContext).load(storageReference).apply(new RequestOptions().placeholder(R.drawable.placeholder)).
-                    into(viewHolder.post_image);*/
 
             Glide.with(mContext).load(post.getPostimage()).apply(new RequestOptions().placeholder(R.drawable.placeholder)).
                     into(viewHolder.post_image);
@@ -351,7 +340,6 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.ImageViewHolde
                 public void onDataChange( DataSnapshot dataSnapshot) {
                     likes.setText(dataSnapshot.getChildrenCount()+" likes");
 
-                    //likes.setText("11 likes");
                 }
 
                 @Override

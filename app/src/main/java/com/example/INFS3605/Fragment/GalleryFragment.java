@@ -26,10 +26,7 @@ public class GalleryFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_gallery, container, false);
-        //setContentView(R.layout.activity_gallery);
 
-        //    getSupportActionBar().setTitle("Aboriginal Art Gallery");
-        //    getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         lstGallery = new ArrayList<>();
         lstGallery.add(new Gallery("Australian Museum-Unsettled(Exhibition)","1 William Street, Sydney NSW 2010, Australia","This land was not peacefully settled - Unsettled uncovers the untold histories behind this nation’s foundation story. In this powerful exhibition, First Nations voices reveal the hidden stories of devastation, survival and the fight for recognition. These first-hand accounts are presented through long hidden historical documents, large-scale artworks, immersive experiences and never-before-seen objects from the Australian Museum collections and beyond.heir lived experiences.", R.drawable.am1, "https://australian.museum/exhibition/unsettled/"));
