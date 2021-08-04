@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.example.ins">
+    package="com.example.INFS3605">
 
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
@@ -14,27 +14,27 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Ins">
-        <activity android:name=".MovieDetailActivity"></activity>
-        <activity android:name=".GalleryDetailActivity" />
-        <activity android:name=".ReconciliationActivity" />
-        <activity android:name=".CommemorationActivity" />
-        <activity android:name=".HistoryActivity" />
-        <activity android:name=".StolenGenActivity" />
-        <activity android:name=".FAQActivity" />
-        <activity android:name=".OptionsActivity" />
-        <activity android:name=".FollowerActivity" />
-        <activity android:name=".EditProfileActivity" />
-        <activity android:name=".CommentsActivity" />
-        <activity android:name=".PostActivity" />
-        <activity android:name=".LoginActivity" />
-        <activity android:name=".MainActivity" />
-        <activity android:name=".Fragment.EventDetail" />
-        <activity android:name=".RegisterActivity" />
+        <activity android:name="com.example.INFS3605.MovieDetailActivity"></activity>
+        <activity android:name="com.example.INFS3605.GalleryDetailActivity" />
+        <activity android:name="com.example.INFS3605.ReconciliationActivity" />
+        <activity android:name="com.example.INFS3605.CommemorationActivity" />
+        <activity android:name="com.example.INFS3605.HistoryActivity" />
+        <activity android:name="com.example.INFS3605.StolenGenActivity" />
+        <activity android:name="com.example.INFS3605.FAQActivity" />
+        <activity android:name="com.example.INFS3605.OptionsActivity" />
+        <activity android:name="com.example.INFS3605.FollowerActivity" />
+        <activity android:name="com.example.INFS3605.EditProfileActivity" />
+        <activity android:name="com.example.INFS3605.CommentsActivity" />
+        <activity android:name="com.example.INFS3605.PostActivity" />
+        <activity android:name="com.example.INFS3605.LoginActivity" />
+        <activity android:name="com.example.INFS3605.MainActivity" />
+        <activity android:name="com.example.INFS3605.Fragment.EventDetail" />
+        <activity android:name="com.example.INFS3605.RegisterActivity" />
         <activity
             android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
             android:theme="@style/Base.Theme.AppCompat"
             tools:ignore="MissingClass" />
-        <activity android:name=".StartActivity">
+        <activity android:name="com.example.INFS3605.StartActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
